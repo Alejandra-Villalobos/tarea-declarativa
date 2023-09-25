@@ -216,6 +216,7 @@ ir_hacia(_, Y):-
 
 ir_hacia(X, Y):-
     abolish(eslabon, 1),
+    abolish(route, 1),
     assert(eslabon(X)),
     ir_hacia_aux(X, Y),
     writeln(X),
