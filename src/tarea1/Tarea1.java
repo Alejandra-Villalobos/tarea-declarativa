@@ -15,21 +15,25 @@ public class Tarea1 {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) {   
         String t1 = "consult('tarea1.pl')";
         Query q1 = new Query(t1);
-        
-        if(!q1.hasSolution())
+
+        if (!q1.hasSolution()) {
             System.out.println("Base de conocimiento no encontrada");
-        else{
+        } else {
             System.out.println("Base de conocimiento encontrada!");
             System.out.println("________________________________");
-            
-            String t2 = "ir_hacia(uca, la_casa_de_los_vestidos)";
+
+            String t2 = "desde_hasta(hotel_capital, uca, W)";
             Query q2 = new Query(t2);
-            System.out.println(q2.oneSolution());
-            
+            System.out.println("Ruta:");
+            while (q2.hasMoreSolutions()) {
+                Map<String, Term> route = q2.nextSolution();
+                System.out.println("W = " + route.get("W"));
+                
+            }
         }
     }
-    
+
 }

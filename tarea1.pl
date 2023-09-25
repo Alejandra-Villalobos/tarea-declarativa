@@ -237,6 +237,9 @@ ir_hacia_aux(X, Y):-
     not(eslabon(Z)),
     assert(eslabon(Z)),
     ir_hacia_aux(Z, Y),
-    writeln(Z), !.
+    writeln(Z),
+    !.
 
-
+desde_hasta(X, Y, W):-
+    ir_hacia(X, Y),
+    eslabon(W).
