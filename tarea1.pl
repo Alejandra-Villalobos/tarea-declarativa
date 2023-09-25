@@ -218,11 +218,13 @@ ir_hacia(X, Y):-
     abolish(eslabon, 1),
     assert(eslabon(X)),
     ir_hacia_aux(X, Y),
-    writeln(X).
+    writeln(X),
+    assert(route(X)).
 
 ir_hacia_aux(X, Y):-
     conecta_con(X, Y),
     writeln(Y),
+    assert(route(Y)),
     assert(eslabon(Y)),
     !.
 
@@ -238,8 +240,9 @@ ir_hacia_aux(X, Y):-
     assert(eslabon(Z)),
     ir_hacia_aux(Z, Y),
     writeln(Z),
+    assert(route(Z)),
     !.
 
 desde_hasta(X, Y, W):-
     ir_hacia(X, Y),
-    eslabon(W).
+    route(W).
