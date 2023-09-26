@@ -7,7 +7,7 @@ package UI;
 import java.util.Map;
 import org.jpl7.Query;
 import org.jpl7.Term;
-import java.util.List;
+import java.util.ArrayList;
 
 /**
  *
@@ -35,18 +35,21 @@ public class Mapa extends javax.swing.JFrame {
         canvas1 = new java.awt.Canvas();
         canvas2 = new java.awt.Canvas();
         textBoxP2 = new javax.swing.JTextField();
-        jLabelP1 = new javax.swing.JLabel();
-        jLabelP2 = new javax.swing.JLabel();
         BtnBuscar = new javax.swing.JButton();
-        labelResultado = new javax.swing.JLabel();
+        rutaList = new java.awt.List();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(null);
 
         textBoxP1.setToolTipText("");
-
-        jLabelP1.setText("Punto de partida: ");
-
-        jLabelP2.setText("Punto de destino: ");
+        getContentPane().add(textBoxP1);
+        textBoxP1.setBounds(59, 38, 220, 22);
+        getContentPane().add(canvas1);
+        canvas1.setBounds(142, 38, 0, 0);
+        getContentPane().add(canvas2);
+        canvas2.setBounds(409, 282, 0, 0);
+        getContentPane().add(textBoxP2);
+        textBoxP2.setBounds(59, 79, 220, 22);
 
         BtnBuscar.setText("Buscar ruta");
         BtnBuscar.addActionListener(new java.awt.event.ActionListener() {
@@ -54,65 +57,16 @@ public class Mapa extends javax.swing.JFrame {
                 BtnBuscarActionPerformed(evt);
             }
         });
+        getContentPane().add(BtnBuscar);
+        BtnBuscar.setBounds(60, 140, 165, 23);
 
-        labelResultado.setText("Resultado: ");
-        labelResultado.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(45, 45, 45)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 57, Short.MAX_VALUE)
-                        .addComponent(BtnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(49, 49, 49)
-                        .addComponent(canvas1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(359, 359, 359))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(labelResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 532, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(canvas2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabelP2)
-                                    .addComponent(jLabelP1))
-                                .addGap(26, 26, 26)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(textBoxP1, javax.swing.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE)
-                                    .addComponent(textBoxP2))
-                                .addGap(0, 0, Short.MAX_VALUE)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(51, 51, 51)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(textBoxP1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelP1))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(textBoxP2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelP2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(BtnBuscar)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(canvas1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(86, 86, 86)
-                                .addComponent(canvas2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(51, 51, 51)
-                                .addComponent(labelResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addGap(118, 118, 118))
-        );
+        rutaList.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rutaListActionPerformed(evt);
+            }
+        });
+        getContentPane().add(rutaList);
+        rutaList.setBounds(60, 190, 210, 200);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -133,7 +87,7 @@ public class Mapa extends javax.swing.JFrame {
             String t2 = "desde_hasta("+ lugar1 + ","+ lugar2 +", W)";
             Query q2 = new Query(t2);
 
-            String rutaSeparadaPorComas = ""; // Inicializa el String vacío
+            ArrayList<String> listaRutas = new ArrayList<>(); 
 
             System.out.println("Ruta:");
             while (q2.hasMoreSolutions()) {
@@ -141,14 +95,15 @@ public class Mapa extends javax.swing.JFrame {
                 System.out.println("W = " + route.get("W"));
                 var ruta = route.get("W").toString();
 
-                if (!rutaSeparadaPorComas.isEmpty()) {
-                    rutaSeparadaPorComas += ", "; // Agrega una coma y un espacio si no es el primer elemento
-                }
-                rutaSeparadaPorComas += ruta;
+                //listaRutas.add(ruta);
+                rutaList.add(ruta);
             }
-            labelResultado.setText(rutaSeparadaPorComas);
+            
         }
     }//GEN-LAST:event_BtnBuscarActionPerformed
+
+    private void rutaListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rutaListActionPerformed
+    }//GEN-LAST:event_rutaListActionPerformed
 
     /**
      * @param args the command line arguments
@@ -189,9 +144,7 @@ public class Mapa extends javax.swing.JFrame {
     private javax.swing.JButton BtnBuscar;
     private java.awt.Canvas canvas1;
     private java.awt.Canvas canvas2;
-    private javax.swing.JLabel jLabelP1;
-    private javax.swing.JLabel jLabelP2;
-    private javax.swing.JLabel labelResultado;
+    private java.awt.List rutaList;
     private javax.swing.JTextField textBoxP1;
     private javax.swing.JTextField textBoxP2;
     // End of variables declaration//GEN-END:variables
