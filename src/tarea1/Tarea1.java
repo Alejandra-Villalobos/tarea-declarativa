@@ -25,7 +25,7 @@ public class Tarea1 {
             System.out.println("Base de conocimiento encontrada!");
             System.out.println("________________________________");
 
-            String t2 = "desde_hasta(uca, la_casa_de_los_vestidos, W)";
+            String t2 = "desde_hasta(multiplaza, estadio_cuscatlan, W)";
             Query q2 = new Query(t2);
             System.out.println("Ruta:");
             while (q2.hasMoreSolutions()) {
