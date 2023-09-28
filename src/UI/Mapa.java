@@ -18,7 +18,9 @@ import java.awt.BasicStroke;
 public class Mapa extends javax.swing.JFrame {
 
     public Mapa() {
+        
         initComponents();
+        ocultarRutas();
     }
 
     @SuppressWarnings("unchecked")
@@ -31,6 +33,7 @@ public class Mapa extends javax.swing.JFrame {
         rutaList = new java.awt.List();
         uca = new javax.swing.JCheckBox();
         hotel_capital = new javax.swing.JCheckBox();
+        imgRutaUca = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         labelHeader = new javax.swing.JLabel();
         labelRuta = new javax.swing.JLabel();
@@ -75,6 +78,10 @@ public class Mapa extends javax.swing.JFrame {
         getContentPane().add(hotel_capital);
         hotel_capital.setBounds(930, 180, 130, 20);
 
+        imgRutaUca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/calle_uca.png"))); // NOI18N
+        getContentPane().add(imgRutaUca);
+        imgRutaUca.setBounds(910, 200, 70, 50);
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/mapa.png"))); // NOI18N
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1);
@@ -101,6 +108,11 @@ public class Mapa extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    public void ocultarRutas(){
+        imgRutaUca.setVisible(!imgRutaUca.isVisible());
+    }
+   
+    /*
     public void paint(Graphics g) {
         super.paint(g);
      
@@ -119,10 +131,10 @@ public class Mapa extends javax.swing.JFrame {
         
         //----------------------------- Calle uca -----------------------------
         // Dibuja una curva punteada
-        //g2d.drawArc(50, 50, 100, 100, 90, 180); // Cambia los valores para ajustar la curva
-        
+        //g2d.drawArc(50, 50, 100, 100, 90, 180); // Cambia los valores para ajustar la curva    
     }
-
+*/
+    
     private void BtnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnBuscarActionPerformed
         rutaList.removeAll();
 
@@ -151,9 +163,12 @@ public class Mapa extends javax.swing.JFrame {
                 System.out.println("W = " + route.get("W"));
                 var ruta = route.get("W").toString();
 
-                //listaRutas.add(ruta);
-                rutaList.add(ruta);
+                listaRutas.add(ruta);//lista para mostrar rutas
+                rutaList.add(ruta);//lista en interfaz
             }
+            
+            if(listaRutas.contains("uca"))
+                imgRutaUca.setVisible(!imgRutaUca.isVisible());
 
         }
     }//GEN-LAST:event_BtnBuscarActionPerformed
@@ -185,17 +200,20 @@ public class Mapa extends javax.swing.JFrame {
         }
         //</editor-fold>
 
+        
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Mapa().setVisible(true);
             }
+            
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnBuscar;
     private javax.swing.JCheckBox hotel_capital;
+    private javax.swing.JLabel imgRutaUca;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel labelHeader;
     private javax.swing.JLabel labelP1;
