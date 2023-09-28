@@ -8,20 +8,18 @@ import java.util.Map;
 import org.jpl7.Query;
 import org.jpl7.Term;
 import java.util.ArrayList;
+import javax.swing.JPanel;
+import javax.swing.JFrame;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Color;
+import java.awt.BasicStroke;
 
-/**
- *
- * @author MINEDUCYT
- */
 public class Mapa extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Mapa
-     */
     public Mapa() {
         initComponents();
     }
-
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -31,19 +29,24 @@ public class Mapa extends javax.swing.JFrame {
         textBoxP2 = new javax.swing.JTextField();
         BtnBuscar = new javax.swing.JButton();
         rutaList = new java.awt.List();
-        checkBoxUca = new javax.swing.JCheckBox();
+        uca = new javax.swing.JCheckBox();
+        hotel_capital = new javax.swing.JCheckBox();
         jLabel1 = new javax.swing.JLabel();
-        jCheckBox1 = new javax.swing.JCheckBox();
+        labelHeader = new javax.swing.JLabel();
+        labelRuta = new javax.swing.JLabel();
+        labelP1 = new javax.swing.JLabel();
+        labelP2 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setSize(new java.awt.Dimension(0, 0));
+        setTitle("Rutas");
+        setBounds(new java.awt.Rectangle(0, 0, 0, 0));
+        setSize(new java.awt.Dimension(1000, 1000));
         getContentPane().setLayout(null);
 
         textBoxP1.setToolTipText("");
         getContentPane().add(textBoxP1);
-        textBoxP1.setBounds(59, 38, 220, 22);
+        textBoxP1.setBounds(130, 90, 170, 22);
         getContentPane().add(textBoxP2);
-        textBoxP2.setBounds(59, 79, 220, 22);
+        textBoxP2.setBounds(130, 130, 170, 22);
 
         BtnBuscar.setText("Buscar ruta");
         BtnBuscar.addActionListener(new java.awt.event.ActionListener() {
@@ -52,8 +55,9 @@ public class Mapa extends javax.swing.JFrame {
             }
         });
         getContentPane().add(BtnBuscar);
-        BtnBuscar.setBounds(60, 140, 165, 23);
+        BtnBuscar.setBounds(30, 170, 270, 30);
 
+        rutaList.setBackground(new java.awt.Color(242, 242, 242));
         rutaList.setEnabled(false);
         rutaList.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -61,25 +65,69 @@ public class Mapa extends javax.swing.JFrame {
             }
         });
         getContentPane().add(rutaList);
-        rutaList.setBounds(60, 190, 210, 200);
+        rutaList.setBounds(30, 260, 270, 230);
 
-        checkBoxUca.setText("UCA");
-        getContentPane().add(checkBoxUca);
-        checkBoxUca.setBounds(940, 270, 47, 20);
+        uca.setText("uca");
+        getContentPane().add(uca);
+        uca.setBounds(980, 250, 70, 20);
+
+        hotel_capital.setText("hotel_capital");
+        getContentPane().add(hotel_capital);
+        hotel_capital.setBounds(930, 180, 130, 20);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/mapa.png"))); // NOI18N
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(300, 40, 960, 620);
+        jLabel1.setBounds(340, 30, 960, 620);
 
-        jCheckBox1.setText("jCheckBox1");
-        getContentPane().add(jCheckBox1);
-        jCheckBox1.setBounds(730, 280, 85, 20);
+        labelHeader.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        labelHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelHeader.setText("Calculo de rutas");
+        getContentPane().add(labelHeader);
+        labelHeader.setBounds(30, 20, 270, 30);
+
+        labelRuta.setText("Ruta a seguir:");
+        getContentPane().add(labelRuta);
+        labelRuta.setBounds(30, 230, 100, 16);
+
+        labelP1.setText("Punto de partida:");
+        getContentPane().add(labelP1);
+        labelP1.setBounds(30, 90, 100, 16);
+
+        labelP2.setText("Punto de destino:");
+        getContentPane().add(labelP2);
+        labelP2.setBounds(30, 130, 100, 16);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    public void paint(Graphics g) {
+        super.paint(g);
+     
+        Graphics2D g2d = (Graphics2D) g;
+
+        g2d.setColor(Color.RED);
+        
+        //----------------------------- Calle uca -----------------------------
+        float[] dashPattern = {5, 5};
+        
+        BasicStroke dashedStroke = new BasicStroke(2, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND, 10, dashPattern, 0);
+        g2d.setStroke(dashedStroke);
+
+        g2d.drawLine(980, 265, 950, 265);
+        g2d.drawLine(925, 250, 950, 265);
+        
+        //----------------------------- Calle uca -----------------------------
+        // Dibuja una curva punteada
+        //g2d.drawArc(50, 50, 100, 100, 90, 180); // Cambia los valores para ajustar la curva
+        
+    }
+
     private void BtnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnBuscarActionPerformed
+        rutaList.removeAll();
+
+        JFrame ventana = new JFrame("Grosor de linea");
+
         String t1 = "consult('tarea1.pl')";
         Query q1 = new Query(t1);
 
@@ -91,11 +139,11 @@ public class Mapa extends javax.swing.JFrame {
 
             String lugar1 = textBoxP1.getText();
             String lugar2 = textBoxP2.getText();
-            
-            String t2 = "desde_hasta("+ lugar1 + ","+ lugar2 +", W)";
+
+            String t2 = "desde_hasta(" + lugar1 + "," + lugar2 + ", W)";
             Query q2 = new Query(t2);
 
-            ArrayList<String> listaRutas = new ArrayList<>(); 
+            ArrayList<String> listaRutas = new ArrayList<>();
 
             System.out.println("Ruta:");
             while (q2.hasMoreSolutions()) {
@@ -106,16 +154,13 @@ public class Mapa extends javax.swing.JFrame {
                 //listaRutas.add(ruta);
                 rutaList.add(ruta);
             }
-            
+
         }
     }//GEN-LAST:event_BtnBuscarActionPerformed
 
     private void rutaListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rutaListActionPerformed
     }//GEN-LAST:event_rutaListActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -150,11 +195,15 @@ public class Mapa extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnBuscar;
-    private javax.swing.JCheckBox checkBoxUca;
-    private javax.swing.JCheckBox jCheckBox1;
+    private javax.swing.JCheckBox hotel_capital;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel labelHeader;
+    private javax.swing.JLabel labelP1;
+    private javax.swing.JLabel labelP2;
+    private javax.swing.JLabel labelRuta;
     private java.awt.List rutaList;
     private javax.swing.JTextField textBoxP1;
     private javax.swing.JTextField textBoxP2;
+    private javax.swing.JCheckBox uca;
     // End of variables declaration//GEN-END:variables
 }
