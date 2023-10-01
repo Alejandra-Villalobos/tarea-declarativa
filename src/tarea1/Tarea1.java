@@ -20,7 +20,9 @@ public class Tarea1 {
     public static void main(String[] args) { 
         
         Mapa ventanaMapa = new Mapa();
+        ventanaMapa.setSize(1400, 700);
         ventanaMapa.setVisible(true);
+        ventanaMapa.setDefaultCloseOperation(Mapa.EXIT_ON_CLOSE);
         
     }
 
