@@ -84,12 +84,12 @@ conecta_con(colegio_augusto_walte, calle_san_jeronimo_emiliani).
 conecta_con(blvr_la_sultana, hotel_capital).
 conecta_con(hotel_capital, blvr_la_sultana).
 
-conecta_con(uca_calle, uca).
-conecta_con(uca, uca_calle).
 conecta_con(los_proceres, uca).
 conecta_con(uca, los_proceres).
 conecta_con(av_albert_einstein, uca).
 conecta_con(uca, av_albert_einstein).
+conecta_con(uca_calle, uca).
+conecta_con(uca, uca_calle).
 
 conecta_con(calle_del_mediterraneo, uno_la_sultana).
 conecta_con(uno_la_sultana, calle_del_mediterraneo).

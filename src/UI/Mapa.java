@@ -7,9 +7,12 @@ package UI;
 import java.util.Map;
 import org.jpl7.Query;
 import org.jpl7.Term;
+import java.util.List;
 import java.util.ArrayList;
+import java.util.HashMap;
 import javax.swing.JPanel;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Color;
@@ -17,9 +20,16 @@ import java.awt.BasicStroke;
 
 public class Mapa extends javax.swing.JFrame {
 
+    private Map<String, JLabel> lugarImagenes = new HashMap<>();//lista de imagens de los lugares
+
+    
     public Mapa() {
-        
         initComponents();
+        
+        lugarImagenes.put("uca", ucaImg);
+        lugarImagenes.put("uca_calle", ucaCalleImg);
+        lugarImagenes.put("hotel_capital",hotelImg);
+        lugarImagenes.put("blvr_la_sultana",calleSultana3Img);
         ocultarRutas();
     }
 
@@ -31,25 +41,30 @@ public class Mapa extends javax.swing.JFrame {
         textBoxP2 = new javax.swing.JTextField();
         BtnBuscar = new javax.swing.JButton();
         rutaList = new java.awt.List();
-        uca = new javax.swing.JCheckBox();
-        hotel_capital = new javax.swing.JCheckBox();
-        imgRutaUca = new javax.swing.JLabel();
+        ucaImg = new javax.swing.JLabel();
+        hotelImg = new javax.swing.JLabel();
+        ucaCalleImg = new javax.swing.JLabel();
+        calleSultana3Img = new javax.swing.JLabel();
+        imagenMapa = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        labelHeader = new javax.swing.JLabel();
-        labelRuta = new javax.swing.JLabel();
-        labelP1 = new javax.swing.JLabel();
-        labelP2 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setTitle("Rutas");
         setBounds(new java.awt.Rectangle(0, 0, 0, 0));
+        setName("home"); // NOI18N
+        setPreferredSize(new java.awt.Dimension(1200, 700));
         setSize(new java.awt.Dimension(1000, 1000));
         getContentPane().setLayout(null);
 
+        textBoxP1.setForeground(new java.awt.Color(204, 204, 204));
         textBoxP1.setToolTipText("");
+        textBoxP1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         getContentPane().add(textBoxP1);
-        textBoxP1.setBounds(130, 90, 170, 22);
+        textBoxP1.setBounds(30, 82, 270, 30);
+
+        textBoxP2.setForeground(new java.awt.Color(204, 204, 204));
         getContentPane().add(textBoxP2);
-        textBoxP2.setBounds(130, 130, 170, 22);
+        textBoxP2.setBounds(30, 122, 270, 30);
 
         BtnBuscar.setText("Buscar ruta");
         BtnBuscar.addActionListener(new java.awt.event.ActionListener() {
@@ -68,77 +83,61 @@ public class Mapa extends javax.swing.JFrame {
             }
         });
         getContentPane().add(rutaList);
-        rutaList.setBounds(30, 260, 270, 230);
+        rutaList.setBounds(30, 280, 270, 230);
 
-        uca.setText("uca");
-        getContentPane().add(uca);
-        uca.setBounds(980, 250, 70, 20);
+        ucaImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/localizacion.png"))); // NOI18N
+        ucaImg.setToolTipText("uca");
+        getContentPane().add(ucaImg);
+        ucaImg.setBounds(820, 390, 68, 60);
 
-        hotel_capital.setText("hotel_capital");
-        getContentPane().add(hotel_capital);
-        hotel_capital.setBounds(930, 180, 130, 20);
+        hotelImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/localizacion.png"))); // NOI18N
+        hotelImg.setToolTipText("hotel capital");
+        getContentPane().add(hotelImg);
+        hotelImg.setBounds(778, 310, 80, 60);
 
-        imgRutaUca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/calle_uca.png"))); // NOI18N
-        getContentPane().add(imgRutaUca);
-        imgRutaUca.setBounds(910, 200, 70, 50);
+        ucaCalleImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/ucaCalle.png"))); // NOI18N
+        getContentPane().add(ucaCalleImg);
+        ucaCalleImg.setBounds(770, 370, 60, 30);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/mapa.png"))); // NOI18N
-        jLabel1.setText("jLabel1");
+        calleSultana3Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/sultanaUcaHotel.png"))); // NOI18N
+        getContentPane().add(calleSultana3Img);
+        calleSultana3Img.setBounds(770, 350, 27, 33);
+
+        imagenMapa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/mapa.png"))); // NOI18N
+        imagenMapa.setText("jLabel1");
+        getContentPane().add(imagenMapa);
+        imagenMapa.setBounds(330, 40, 960, 580);
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel1.setText("Como llegar");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(340, 30, 960, 620);
+        jLabel1.setBounds(30, 40, 230, 20);
 
-        labelHeader.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        labelHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelHeader.setText("Calculo de rutas");
-        getContentPane().add(labelHeader);
-        labelHeader.setBounds(30, 20, 270, 30);
-
-        labelRuta.setText("Ruta a seguir:");
-        getContentPane().add(labelRuta);
-        labelRuta.setBounds(30, 230, 100, 16);
-
-        labelP1.setText("Punto de partida:");
-        getContentPane().add(labelP1);
-        labelP1.setBounds(30, 90, 100, 16);
-
-        labelP2.setText("Punto de destino:");
-        getContentPane().add(labelP2);
-        labelP2.setBounds(30, 130, 100, 16);
+        jLabel2.setText("Ruta:");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(30, 260, 120, 16);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     public void ocultarRutas(){
-        imgRutaUca.setVisible(!imgRutaUca.isVisible());
+        for (Map.Entry<String, JLabel> entry : lugarImagenes.entrySet()) {
+            JLabel img = entry.getValue();           
+            System.out.println("calue:" + img.getName());
+            img.setVisible(!img.isVisible());
+        }
+        
     }
-   
-    /*
-    public void paint(Graphics g) {
-        super.paint(g);
-     
-        Graphics2D g2d = (Graphics2D) g;
-
-        g2d.setColor(Color.RED);
-        
-        //----------------------------- Calle uca -----------------------------
-        float[] dashPattern = {5, 5};
-        
-        BasicStroke dashedStroke = new BasicStroke(2, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND, 10, dashPattern, 0);
-        g2d.setStroke(dashedStroke);
-
-        g2d.drawLine(980, 265, 950, 265);
-        g2d.drawLine(925, 250, 950, 265);
-        
-        //----------------------------- Calle uca -----------------------------
-        // Dibuja una curva punteada
-        //g2d.drawArc(50, 50, 100, 100, 90, 180); // Cambia los valores para ajustar la curva    
+    
+    public void mostrarLugares(String lugar){
+        JLabel imagen = lugarImagenes.get(lugar);
+        if (imagen != null) {
+            imagen.setVisible(true);
+        }
     }
-*/
     
     private void BtnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnBuscarActionPerformed
         rutaList.removeAll();
-
-        JFrame ventana = new JFrame("Grosor de linea");
 
         String t1 = "consult('tarea1.pl')";
         Query q1 = new Query(t1);
@@ -149,27 +148,23 @@ public class Mapa extends javax.swing.JFrame {
             System.out.println("Base de conocimiento encontrada!");
             System.out.println("________________________________");
 
-            String lugar1 = textBoxP1.getText();
-            String lugar2 = textBoxP2.getText();
+            String lugar1 = textBoxP1.getText(); //textBox punto de partida
+            String lugar2 = textBoxP2.getText(); //textBox punto de destino
 
-            String t2 = "desde_hasta(" + lugar1 + "," + lugar2 + ", W)";
-            Query q2 = new Query(t2);
+            String t2 = "desde_hasta(" + lugar1 + "," + lugar2 + ", W)"; //consulta
+            Query q2 = new Query(t2);//query
 
-            ArrayList<String> listaRutas = new ArrayList<>();
+            ArrayList<String> listaRutas = new ArrayList<>();//lista que contiene los lugares que componen la ruta
 
-            System.out.println("Ruta:");
             while (q2.hasMoreSolutions()) {
-                Map<String, Term> route = q2.nextSolution();
+                Map<String, Term> route = q2.nextSolution(); //obtener respuesta
                 System.out.println("W = " + route.get("W"));
-                var ruta = route.get("W").toString();
+                var ruta = route.get("W").toString(); //obtener valor y convertirlo a string
 
-                listaRutas.add(ruta);//lista para mostrar rutas
-                rutaList.add(ruta);//lista en interfaz
+                listaRutas.add(ruta);//agragar lugar a la lista
+                rutaList.add(ruta);//agregar a la lista de la interfaz
+                mostrarLugares(ruta);//mostrar las imagenes de los lugares seleccionados
             }
-            
-            if(listaRutas.contains("uca"))
-                imgRutaUca.setVisible(!imgRutaUca.isVisible());
-
         }
     }//GEN-LAST:event_BtnBuscarActionPerformed
 
@@ -212,16 +207,15 @@ public class Mapa extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnBuscar;
-    private javax.swing.JCheckBox hotel_capital;
-    private javax.swing.JLabel imgRutaUca;
+    private javax.swing.JLabel calleSultana3Img;
+    private javax.swing.JLabel hotelImg;
+    private javax.swing.JLabel imagenMapa;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel labelHeader;
-    private javax.swing.JLabel labelP1;
-    private javax.swing.JLabel labelP2;
-    private javax.swing.JLabel labelRuta;
+    private javax.swing.JLabel jLabel2;
     private java.awt.List rutaList;
     private javax.swing.JTextField textBoxP1;
     private javax.swing.JTextField textBoxP2;
-    private javax.swing.JCheckBox uca;
+    private javax.swing.JLabel ucaCalleImg;
+    private javax.swing.JLabel ucaImg;
     // End of variables declaration//GEN-END:variables
 }
