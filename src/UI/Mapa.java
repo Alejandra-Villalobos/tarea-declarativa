@@ -27,13 +27,14 @@ public class Mapa extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        textBoxP1 = new javax.swing.JTextField();
-        textBoxP2 = new javax.swing.JTextField();
+        origenTextbox = new javax.swing.JTextField();
+        destinoTextbox = new javax.swing.JTextField();
         BtnBuscar = new javax.swing.JButton();
         rutaList = new java.awt.List();
-        uca = new javax.swing.JCheckBox();
-        hotel_capital = new javax.swing.JCheckBox();
         imgRutaUca = new javax.swing.JLabel();
+        toggleVestidos = new javax.swing.JToggleButton();
+        toggleHotel = new javax.swing.JToggleButton();
+        toggleUCA = new javax.swing.JToggleButton();
         jLabel1 = new javax.swing.JLabel();
         labelHeader = new javax.swing.JLabel();
         labelRuta = new javax.swing.JLabel();
@@ -45,11 +46,11 @@ public class Mapa extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(1000, 1000));
         getContentPane().setLayout(null);
 
-        textBoxP1.setToolTipText("");
-        getContentPane().add(textBoxP1);
-        textBoxP1.setBounds(130, 90, 170, 22);
-        getContentPane().add(textBoxP2);
-        textBoxP2.setBounds(130, 130, 170, 22);
+        origenTextbox.setToolTipText("");
+        getContentPane().add(origenTextbox);
+        origenTextbox.setBounds(130, 90, 170, 22);
+        getContentPane().add(destinoTextbox);
+        destinoTextbox.setBounds(130, 130, 170, 22);
 
         BtnBuscar.setText("Buscar ruta");
         BtnBuscar.addActionListener(new java.awt.event.ActionListener() {
@@ -70,17 +71,37 @@ public class Mapa extends javax.swing.JFrame {
         getContentPane().add(rutaList);
         rutaList.setBounds(30, 260, 270, 230);
 
-        uca.setText("uca");
-        getContentPane().add(uca);
-        uca.setBounds(980, 250, 70, 20);
-
-        hotel_capital.setText("hotel_capital");
-        getContentPane().add(hotel_capital);
-        hotel_capital.setBounds(930, 180, 130, 20);
-
         imgRutaUca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/calle_uca.png"))); // NOI18N
         getContentPane().add(imgRutaUca);
         imgRutaUca.setBounds(910, 200, 70, 50);
+
+        toggleVestidos.setText("La Casa de los Vestidos");
+        toggleVestidos.setActionCommand("La Casa de\nlos Vestidos");
+        toggleVestidos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                toggleVestidosActionPerformed(evt);
+            }
+        });
+        getContentPane().add(toggleVestidos);
+        toggleVestidos.setBounds(950, 50, 160, 30);
+
+        toggleHotel.setText("Hotel Capital");
+        toggleHotel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                toggleHotelActionPerformed(evt);
+            }
+        });
+        getContentPane().add(toggleHotel);
+        toggleHotel.setBounds(940, 200, 110, 23);
+
+        toggleUCA.setText("UCA");
+        toggleUCA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                toggleUCAActionPerformed(evt);
+            }
+        });
+        getContentPane().add(toggleUCA);
+        toggleUCA.setBounds(940, 260, 53, 23);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/mapa.png"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -149,8 +170,8 @@ public class Mapa extends javax.swing.JFrame {
             System.out.println("Base de conocimiento encontrada!");
             System.out.println("________________________________");
 
-            String lugar1 = textBoxP1.getText();
-            String lugar2 = textBoxP2.getText();
+            String lugar1 = origenTextbox.getText();
+            String lugar2 = destinoTextbox.getText();
 
             String t2 = "desde_hasta(" + lugar1 + "," + lugar2 + ", W)";
             Query q2 = new Query(t2);
@@ -176,6 +197,31 @@ public class Mapa extends javax.swing.JFrame {
     private void rutaListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rutaListActionPerformed
     }//GEN-LAST:event_rutaListActionPerformed
 
+    private void toggleUCAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toggleUCAActionPerformed
+        validate(toggleUCA, "uca");
+    }//GEN-LAST:event_toggleUCAActionPerformed
+
+    private void toggleHotelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toggleHotelActionPerformed
+        validate(toggleHotel, "hotel_capital");
+    }//GEN-LAST:event_toggleHotelActionPerformed
+
+    private void toggleVestidosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toggleVestidosActionPerformed
+        validate(toggleVestidos, "la_casa_de_los_vestidos");
+    }//GEN-LAST:event_toggleVestidosActionPerformed
+
+    private void validate(javax.swing.JToggleButton button, String place){
+        if(origenTextbox.getText().equals("") && button.isSelected())
+            origenTextbox.setText(place); 
+        else if(destinoTextbox.getText().equals("") && button.isSelected())
+            destinoTextbox.setText(place);
+        else if(origenTextbox.getText().equals(place) && !button.isSelected())
+            origenTextbox.setText("");
+        else if(destinoTextbox.getText().equals(place) && !button.isSelected())
+            destinoTextbox.setText("");
+        else
+            button.setSelected(false);
+    }
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -212,16 +258,17 @@ public class Mapa extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnBuscar;
-    private javax.swing.JCheckBox hotel_capital;
+    private javax.swing.JTextField destinoTextbox;
     private javax.swing.JLabel imgRutaUca;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel labelHeader;
     private javax.swing.JLabel labelP1;
     private javax.swing.JLabel labelP2;
     private javax.swing.JLabel labelRuta;
+    private javax.swing.JTextField origenTextbox;
     private java.awt.List rutaList;
-    private javax.swing.JTextField textBoxP1;
-    private javax.swing.JTextField textBoxP2;
-    private javax.swing.JCheckBox uca;
+    private javax.swing.JToggleButton toggleHotel;
+    private javax.swing.JToggleButton toggleUCA;
+    private javax.swing.JToggleButton toggleVestidos;
     // End of variables declaration//GEN-END:variables
 }
