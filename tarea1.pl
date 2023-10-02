@@ -101,8 +101,6 @@ conecta_con(blvr_sergio_viera_de_mello, centro_comercial_bambu).
 
 conecta_con(hospital_el_salvador, alameda_manuel_enrique_araujo_2).
 conecta_con(alameda_manuel_enrique_araujo_2, hospital_el_salvador).
-conecta_con(hospital_el_salvador, alameda_manuel_enrique_araujo_3).
-conecta_con(alameda_manuel_enrique_araujo_3, hospital_el_salvador).
 
 conecta_con(centro_comercial_feria_rosa, alameda_manuel_enrique_araujo_1).
 conecta_con(alameda_manuel_enrique_araujo_1, centro_comercial_feria_rosa).
@@ -409,3 +407,9 @@ ir_hacia_aux(X, Y):-
 desde_hasta(X, Y, W):-
     ir_hacia(X, Y),
     route(W).
+
+
+
+
+
+
