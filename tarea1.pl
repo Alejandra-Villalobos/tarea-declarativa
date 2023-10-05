@@ -17,13 +17,12 @@ lugar(hotel_capital).
 lugar(uno_la_sultana).
 lugar(escuela_alemana).
 lugar(uca).
-lugar(mcdonalds).
 lugar(cancha_coopefa).
+lugar(parque_de_pelotas).
 lugar(uno_las_lomas).
 lugar(bally_sports_center).
 lugar(texaco_coopefa).
-lugar(veterinaria_santa_fe).
-lugar(dollar_city).
+lugar(escuela_militar).
 lugar(parque_lomas_san_francisco).
 lugar(veterinaria_san_francisco).
 lugar(centro_comercial_las_acacias).
@@ -33,6 +32,14 @@ lugar(estadio_cuscatlan).
 
 % CALLES
 
+calle(av_las_mercedes_1).
+calle(av_las_mercedes_2).
+
+calle(calle_capitan_douglas_varela).
+
+calle(av_independecia_1).
+calle(av_independecia_2).
+
 calle(carretera_panamericana_1).
 calle(carretera_panamericana_2).
 calle(carretera_panamericana_3).
@@ -40,6 +47,7 @@ calle(carretera_panamericana_3).
 calle(alameda_manuel_enrique_araujo_1).
 calle(alameda_manuel_enrique_araujo_2).
 calle(alameda_manuel_enrique_araujo_3).
+calle(alameda_manuel_enrique_araujo_4).
 
 calle(av_de_la_revolucion).
 
@@ -54,6 +62,7 @@ calle(calle_del_mediterraneo_2).
 
 calle(blvr_la_sultana_1).
 calle(blvr_la_sultana_2).
+calle(blvr_la_sultana_3).
 
 calle(los_proceres_1).
 calle(los_proceres_2).
@@ -67,16 +76,9 @@ calle(los_proceres_9).
 calle(los_proceres_10).
 calle(los_proceres_11).
 
-calle(av_infanteria).
-
 calle(calle_jorge_dominguez).
 
-calle(calle_antiguo_motserrat_1).
-calle(calle_antiguo_motserrat_2).
-calle(calle_antiguo_motserrat_3).
-
-calle(colonia_general_arce_1).
-calle(colonia_general_arce_2).
+calle(colonia_general_arce).
 
 calle(av_albert_einstein_1).
 calle(av_albert_einstein_2).
@@ -95,6 +97,15 @@ calle(calle_antigua_a_huizucar_4).
 
 % Conecta_con/2
 % ESTABLECIMIENTOS-CALLES
+
+conecta_con(escuela_militar, av_independecia_1).
+conecta_con(av_independecia_1, escuela_militar).
+
+conecta_con(cancha_coopefa, calle_capitan_douglas_varela).
+conecta_con(calle_capitan_douglas_varela, cancha_coopefa).
+
+conecta_con(parque_de_pelotas, alameda_manuel_enrique_araujo_4).
+conecta_con(alameda_manuel_enrique_araujo_4, parque_de_pelotas).
 
 conecta_con(centro_comercial_bambu, blvr_sergio_viera_de_mello).
 conecta_con(blvr_sergio_viera_de_mello, centro_comercial_bambu).
@@ -130,10 +141,10 @@ conecta_con(las_cascadas, carretera_panamericana_1).
 conecta_con(calle_san_jeronimo_emiliani, colegio_augusto_walte).
 conecta_con(colegio_augusto_walte, calle_san_jeronimo_emiliani).
 
-conecta_con(blvr_la_sultana_1, hotel_capital).
-conecta_con(hotel_capital, blvr_la_sultana_1).
 conecta_con(blvr_la_sultana_2, hotel_capital).
 conecta_con(hotel_capital, blvr_la_sultana_2).
+conecta_con(blvr_la_sultana_3, hotel_capital).
+conecta_con(hotel_capital, blvr_la_sultana_3).
 
 conecta_con(blvr_la_sultana_1, uca).
 conecta_con(uca, blvr_la_sultana_1).
@@ -152,6 +163,10 @@ conecta_con(calle_del_mediterraneo_1, uno_la_sultana).
 conecta_con(uno_la_sultana, calle_del_mediterraneo_1).
 conecta_con(calle_del_mediterraneo_2, uno_la_sultana).
 conecta_con(uno_la_sultana, calle_del_mediterraneo_2).
+conecta_con(uno_la_sultana, calle_antigua_ferrocarril).
+conecta_con(calle_antigua_ferrocarril, uno_la_sultana).
+conecta_con(uno_la_sultana, blvr_la_sultana_1).
+conecta_con(blvr_la_sultana_1, uno_la_sultana).
 
 conecta_con(calle_del_mediterraneo_2, escuela_alemana).
 conecta_con(escuela_alemana, calle_del_mediterraneo_2).
@@ -159,34 +174,11 @@ conecta_con(escuela_alemana, calle_del_mediterraneo_2).
 conecta_con(calle_jorge_dominguez, la_casa_de_los_vestidos).
 conecta_con(la_casa_de_los_vestidos, calle_jorge_dominguez).
 
-conecta_con(colonia_general_arce_1, cancha_coopefa).
-conecta_con(cancha_coopefa, colonia_general_arce_1).
+conecta_con(colonia_general_arce, cancha_coopefa).
+conecta_con(cancha_coopefa, colonia_general_arce).
 
-conecta_con(colonia_general_arce_1, texaco_coopefa).
-conecta_con(texaco_coopefa, colonia_general_arce_1).
-conecta_con(colonia_general_arce_2, texaco_coopefa).
-conecta_con(texaco_coopefa, colonia_general_arce_2).
-conecta_con(calle_antiguo_montserrat_2, texaco_coopefa).
-conecta_con(texaco_coopefa, calle_antiguo_montserrat_2).
-conecta_con(calle_antiguo_montserrat_3, texaco_coopefa).
-conecta_con(texaco_coopefa, calle_antiguo_montserrat_3).
-
-conecta_con(calle_antiguo_montserrat_3, veterinaria_santa_fe).
-conecta_con(veterinaria_santa_fe, calle_antiguo_montserrat_3).
-
-conecta_con(calle_antiguo_montserrat_1, mcdonalds).
-conecta_con(mcdonalds, calle_antiguo_montserrat_1).
-conecta_con(calle_antiguo_montserrat_2, mcdonalds).
-conecta_con(mcdonalds, calle_antiguo_montserrat_2).
-conecta_con(los_proceres_6, mcdonalds).
-conecta_con(mcdonalds, los_proceres_6).
-conecta_con(los_proceres_7, mcdonalds).
-conecta_con(mcdonalds, los_proceres_7).
-
-conecta_con(los_proceres_9, dollar_city).
-conecta_con(dollar_city, los_proceres_9).
-conecta_con(los_proceres_10, dollar_city).
-conecta_con(dollar_city, los_proceres_10).
+conecta_con(colonia_general_arce, texaco_coopefa).
+conecta_con(texaco_coopefa, colonia_general_arce).
 
 conecta_con(av_albert_einstein_2, bally_sports_center).
 conecta_con(bally_sports_center, av_albert_einstein_2).
@@ -231,6 +223,21 @@ conecta_con(calle_antigua_a_huizucar_4, estadio_cuscatlan).
 conecta_con(estadio_cuscatlan, calle_antigua_a_huizucar_4).
 
 % CALLES-CALLES
+conecta_con(av_independecia_2, calle_jorge_dominguez).
+conecta_con(calle_jorge_dominguez, av_independecia_2).
+
+conecta_con(av_las_mercedes_1, alameda_manuel_enrique_araujo_4).
+conecta_con(alameda_manuel_enrique_araujo_4, av_las_mercedes_1).
+
+conecta_con(av_independecia_1, av_las_mercedes_1).
+conecta_con(av_las_mercedes_1, av_independecia_1).
+
+conecta_con(calle_capitan_douglas_varela, av_las_mercedes_2).
+conecta_con(av_las_mercedes_2, calle_capitan_douglas_varela).
+
+conecta_con(calle_capitan_douglas_varela, colonia_general_arce).
+conecta_con(colonia_general_arce, calle_capitan_douglas_varela).
+
 conecta_con(carretera_panamericana_3, alameda_manuel_enrique_araujo_1).
 conecta_con(alameda_manuel_enrique_araujo_1, carretera_panamericana_3).
 
@@ -262,24 +269,10 @@ conecta_con(blvr_la_sultana_1, calle_del_mediterraneo_1).
 conecta_con(blvr_la_sultana_1, calle_antigua_ferrocarril).
 conecta_con(calle_antigua_ferrocarril, blvr_la_sultana_1).
 
-conecta_con(blvr_la_sultana_2, los_proceres_3).
-conecta_con(los_proceres_3, blvr_la_sultana_2).
-conecta_con(blvr_la_sultana_2, los_proceres_4).
-conecta_con(los_proceres_4, blvr_la_sultana_2).
-
-conecta_con(av_infanteria, los_proceres_5).
-conecta_con(los_proceres_5, av_infanteria).
-conecta_con(av_infanteria, los_proceres_6).
-conecta_con(los_proceres_6, av_infanteria).
-
-conecta_con(av_infanteria, calle_jorge_dominguez).
-conecta_con(calle_jorge_dominguez, av_infanteria).
-
-conecta_con(calle_antiguo_montserrat_1, los_proceres_7).
-conecta_con(los_proceres_7, calle_antiguo_montserrat_1).
-
-conecta_con(calle_antiguo_montserrat_2, colonia_general_arce_2).
-conecta_con(colonia_general_arce_2, calle_antiguo_montserrat_2).
+conecta_con(blvr_la_sultana_3, los_proceres_3).
+conecta_con(los_proceres_3, blvr_la_sultana_3).
+conecta_con(blvr_la_sultana_3, los_proceres_4).
+conecta_con(los_proceres_4, blvr_la_sultana_3).
 
 conecta_con(av_albert_einstein_3, los_proceres_7).
 conecta_con(los_proceres_7, av_albert_einstein_3).
@@ -305,12 +298,16 @@ conecta_con(alameda_manuel_enrique_araujo_1, alameda_manuel_enrique_araujo_2).
 conecta_con(alameda_manuel_enrique_araujo_2, alameda_manuel_enrique_araujo_1).
 conecta_con(alameda_manuel_enrique_araujo_2, alameda_manuel_enrique_araujo_3).
 conecta_con(alameda_manuel_enrique_araujo_3, alameda_manuel_enrique_araujo_2).
+conecta_con(alameda_manuel_enrique_araujo_3, alameda_manuel_enrique_araujo_4).
+conecta_con(alameda_manuel_enrique_araujo_4, alameda_manuel_enrique_araujo_3).
 
 conecta_con(calle_del_mediterraneo_1, calle_del_mediterraneo_2).
 conecta_con(calle_del_mediterraneo_2, calle_del_mediterraneo_1).
 
 conecta_con(blvr_la_sultana_1, blvr_la_sultana_2).
 conecta_con(blvr_la_sultana_2, blvr_la_sultana_1).
+conecta_con(blvr_la_sultana_2, blvr_la_sultana_3).
+conecta_con(blvr_la_sultana_3, blvr_la_sultana_2).
 
 conecta_con(av_albert_einstein_1, av_albert_einstein_2).
 conecta_con(av_albert_einstein_2, av_albert_einstein_1).
@@ -331,13 +328,11 @@ conecta_con(calle_antigua_a_huizucar_3, calle_antigua_a_huizucar_2).
 conecta_con(calle_antigua_a_huizucar_3, calle_antigua_a_huizucar_4).
 conecta_con(calle_antigua_a_huizucar_4, calle_antigua_a_huizucar_3).
 
-conecta_con(calle_antiguo_montserrat_1, calle_antiguo_montserrat_2).
-conecta_con(calle_antiguo_montserrat_2, calle_antiguo_montserrat_1).
-conecta_con(calle_antiguo_montserrat_2, calle_antiguo_montserrat_3).
-conecta_con(calle_antiguo_montserrat_3, calle_antiguo_montserrat_2).
+conecta_con(av_las_mercedes_1, av_las_mercedes_2).
+conecta_con(av_las_mercedes_2, av_las_mercedes_1).
 
-conecta_con(colonia_general_arce_1, colonia_general_arce_2).
-conecta_con(colonia_general_arce_2, colonia_general_arce_1).
+conecta_con(av_independecia_1, av_independecia_2).
+conecta_con(av_independecia_2, av_independecia_1).
 
 conecta_con(los_proceres_1, los_proceres_2).
 conecta_con(los_proceres_2, los_proceres_1).
@@ -407,9 +402,3 @@ ir_hacia_aux(X, Y):-
 desde_hasta(X, Y, W):-
     ir_hacia(X, Y),
     route(W).
-
-
-
-
-
-
