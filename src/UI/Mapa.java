@@ -42,13 +42,13 @@ public class Mapa extends javax.swing.JFrame {
         lugarImagenes.put("la_casa_de_los_vestidos", casaDeLoVestidosImg);
         lugarImagenes.put("uno_la_sultana", unoSultanaImg);
         lugarImagenes.put("escuela_alemana", escuelaAlemanaImg);
-        lugarImagenes.put("mcdonalds", mcDonaldsImg);
+        lugarImagenes.put("mcdonalds", escuelaMilitarImg);
         lugarImagenes.put("cancha_coopefa", canchaCoopefaImg);
         lugarImagenes.put("uno_las_lomas", unoLasLomasImg);
         lugarImagenes.put("bally_sports_center", ballySportsImg);
         lugarImagenes.put("texaco_coopefa", texacoCoopefaImg);
         lugarImagenes.put("veterinaria_santa_fe", veterinariaSantaFeImg);
-        lugarImagenes.put("dollar_city", dollarCityImg);
+        lugarImagenes.put("dollar_city", parqueDePelotasImg);
         lugarImagenes.put("parque_lomas_san_francisco", parqueLomasDeSanFranciscoimg);
         lugarImagenes.put("veterinaria_san_francisco", veterinariaSanFranciscoImg);
         lugarImagenes.put("centro_comercial_las_acacias", cc_acaciasImg);
@@ -78,7 +78,7 @@ public class Mapa extends javax.swing.JFrame {
         CCBambuImg = new javax.swing.JLabel();
         escuelaAlemanaImg = new javax.swing.JLabel();
         texacoCoopefaImg = new javax.swing.JLabel();
-        mcDonaldsImg = new javax.swing.JLabel();
+        escuelaMilitarImg = new javax.swing.JLabel();
         casaDeLoVestidosImg = new javax.swing.JLabel();
         ccFeriaRosaImg = new javax.swing.JLabel();
         colegioHighlandsImg = new javax.swing.JLabel();
@@ -96,7 +96,7 @@ public class Mapa extends javax.swing.JFrame {
         texacoLomaLindaImg = new javax.swing.JLabel();
         gambetaLosProceresImg = new javax.swing.JLabel();
         cc_acaciasImg = new javax.swing.JLabel();
-        dollarCityImg = new javax.swing.JLabel();
+        parqueDePelotasImg = new javax.swing.JLabel();
         imagenMapa = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         textBoxP2 = new javax.swing.JTextField();
@@ -171,10 +171,10 @@ public class Mapa extends javax.swing.JFrame {
         getContentPane().add(texacoCoopefaImg);
         texacoCoopefaImg.setBounds(1010, 320, 30, 40);
 
-        mcDonaldsImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/localizacion.png"))); // NOI18N
-        mcDonaldsImg.setToolTipText("mcDonalds");
-        getContentPane().add(mcDonaldsImg);
-        mcDonaldsImg.setBounds(960, 330, 30, 40);
+        escuelaMilitarImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/localizacion.png"))); // NOI18N
+        escuelaMilitarImg.setToolTipText("Escuela Militar Gerardo Barrios");
+        getContentPane().add(escuelaMilitarImg);
+        escuelaMilitarImg.setBounds(910, 230, 30, 40);
 
         casaDeLoVestidosImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/localizacion.png"))); // NOI18N
         casaDeLoVestidosImg.setToolTipText("La casa de los vestidos");
@@ -261,10 +261,10 @@ public class Mapa extends javax.swing.JFrame {
         getContentPane().add(cc_acaciasImg);
         cc_acaciasImg.setBounds(1120, 570, 30, 40);
 
-        dollarCityImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/localizacion.png"))); // NOI18N
-        dollarCityImg.setToolTipText("Dollar City");
-        getContentPane().add(dollarCityImg);
-        dollarCityImg.setBounds(1140, 340, 30, 40);
+        parqueDePelotasImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/localizacion.png"))); // NOI18N
+        parqueDePelotasImg.setToolTipText("Parque de pelotas");
+        getContentPane().add(parqueDePelotasImg);
+        parqueDePelotasImg.setBounds(950, 170, 30, 40);
 
         imagenMapa.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         imagenMapa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/mapa.png"))); // NOI18N
@@ -456,9 +456,9 @@ public class Mapa extends javax.swing.JFrame {
     private javax.swing.JLabel ccFeriaRosaImg;
     private javax.swing.JLabel cc_acaciasImg;
     private javax.swing.JLabel colegioHighlandsImg;
-    private javax.swing.JLabel dollarCityImg;
     private javax.swing.JLabel enriqueAraujo3Img;
     private javax.swing.JLabel escuelaAlemanaImg;
+    private javax.swing.JLabel escuelaMilitarImg;
     private javax.swing.JLabel estadioCuscatlanImg;
     private javax.swing.JLabel gambetaLosProceresImg;
     private javax.swing.JLabel hospitalImg;
@@ -472,8 +472,8 @@ public class Mapa extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JLabel lasCascadasImg;
-    private javax.swing.JLabel mcDonaldsImg;
     private javax.swing.JLabel multiplazaImg;
+    private javax.swing.JLabel parqueDePelotasImg;
     private javax.swing.JLabel parqueLomasDeSanFranciscoimg;
     private java.awt.List rutaList;
     private javax.swing.JLabel texacoCoopefaImg;
