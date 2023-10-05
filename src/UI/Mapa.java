@@ -128,7 +128,6 @@ public class Mapa extends javax.swing.JFrame {
         hospitalImg.setToolTipText("Hospital de El Salvador");
         getContentPane().add(hospitalImg);
         hospitalImg.setBounds(820, 220, 27, 50);
-        hospitalImg.getAccessibleContext().setAccessibleDescription("Hospital de El Salvador");
 
         ucaImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/localizacion.png"))); // NOI18N
         ucaImg.setToolTipText("uca");
