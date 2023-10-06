@@ -30,6 +30,7 @@ lugar(gambeta_los_proceres).
 lugar(texaco_loma_linda).
 lugar(estadio_cuscatlan).
 
+
 % CALLES
 
 calle(av_las_mercedes_1).
