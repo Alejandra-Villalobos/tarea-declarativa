@@ -1,5 +1,5 @@
 % Alejandra Maria Villalobos Amaya 00132820
-% Karen Arely Burgos Sig�enza 00043820
+% Karen Arely Burgos Sig enza 00043820
 
 % Lugares/1
 % ESTABLECIMIENTOS
@@ -74,7 +74,6 @@ calle(los_proceres_7).
 calle(los_proceres_8).
 calle(los_proceres_9).
 calle(los_proceres_10).
-calle(los_proceres_11).
 
 calle(calle_jorge_dominguez).
 
@@ -92,8 +91,8 @@ calle(c_n1_4).
 calle(calle_antigua_a_huizucar_1).
 calle(calle_antigua_a_huizucar_2).
 calle(calle_antigua_a_huizucar_3).
-calle(calle_antigua_a_huizucar_4).
 
+calle(calle_uca).
 
 % Conecta_con/2
 % ESTABLECIMIENTOS-CALLES
@@ -146,10 +145,13 @@ conecta_con(hotel_capital, blvr_la_sultana_2).
 conecta_con(blvr_la_sultana_3, hotel_capital).
 conecta_con(hotel_capital, blvr_la_sultana_3).
 
-conecta_con(blvr_la_sultana_1, uca).
-conecta_con(uca, blvr_la_sultana_1).
-conecta_con(blvr_la_sultana_2, uca).
-conecta_con(uca, blvr_la_sultana_2).
+conecta_con(blvr_la_sultana_1, calle_uca).
+conecta_con(calle_uca, blvr_la_sultana_1).
+conecta_con(blvr_la_sultana_2, calle_uca).
+conecta_con(calle_uca, blvr_la_sultana_2).
+
+conecta_con(uca, calle_uca).
+conecta_con(calle_uca, uca).
 conecta_con(los_proceres_4, uca).
 conecta_con(uca, los_proceres_4).
 conecta_con(los_proceres_5, uca).
@@ -159,8 +161,6 @@ conecta_con(uca, av_albert_einstein_1).
 conecta_con(av_albert_einstein_2, uca).
 conecta_con(uca, av_albert_einstein_2).
 
-conecta_con(calle_del_mediterraneo_1, uno_la_sultana).
-conecta_con(uno_la_sultana, calle_del_mediterraneo_1).
 conecta_con(calle_del_mediterraneo_2, uno_la_sultana).
 conecta_con(uno_la_sultana, calle_del_mediterraneo_2).
 conecta_con(uno_la_sultana, calle_antigua_ferrocarril).
@@ -168,6 +168,8 @@ conecta_con(calle_antigua_ferrocarril, uno_la_sultana).
 conecta_con(uno_la_sultana, blvr_la_sultana_1).
 conecta_con(blvr_la_sultana_1, uno_la_sultana).
 
+conecta_con(calle_del_mediterraneo_1, escuela_alemana).
+conecta_con(escuela_alemana, calle_del_mediterraneo_1).
 conecta_con(calle_del_mediterraneo_2, escuela_alemana).
 conecta_con(escuela_alemana, calle_del_mediterraneo_2).
 
@@ -204,23 +206,19 @@ conecta_con(c_n1_3, gambeta_los_proceres).
 conecta_con(gambeta_los_proceres, c_n1_3).
 conecta_con(c_n1_4, gambeta_los_proceres).
 conecta_con(gambeta_los_proceres, c_n1_4).
-conecta_con(calle_antigua_a_huizucar_1, gambeta_los_proceres).
-conecta_con(gambeta_los_proceres, calle_antigua_a_huizucar_1).
-conecta_con(calle_antigua_a_huizucar_2, gambeta_los_proceres).
-conecta_con(gambeta_los_proceres, calle_antigua_a_huizucar_2).
 
 conecta_con(calle_antigua_a_huizucar_1, centro_comercial_las_acacias).
 conecta_con(centro_comercial_las_acacias, calle_antigua_a_huizucar_1).
 
+conecta_con(calle_antigua_a_huizucar_1, texaco_loma_linda).
+conecta_con(texaco_loma_linda, calle_antigua_a_huizucar_1).
 conecta_con(calle_antigua_a_huizucar_2, texaco_loma_linda).
 conecta_con(texaco_loma_linda, calle_antigua_a_huizucar_2).
-conecta_con(calle_antigua_a_huizucar_3, texaco_loma_linda).
-conecta_con(texaco_loma_linda, calle_antigua_a_huizucar_3).
 
+conecta_con(calle_antigua_a_huizucar_2, estadio_cuscatlan).
+conecta_con(estadio_cuscatlan, calle_antigua_a_huizucar_2).
 conecta_con(calle_antigua_a_huizucar_3, estadio_cuscatlan).
 conecta_con(estadio_cuscatlan, calle_antigua_a_huizucar_3).
-conecta_con(calle_antigua_a_huizucar_4, estadio_cuscatlan).
-conecta_con(estadio_cuscatlan, calle_antigua_a_huizucar_4).
 
 % CALLES-CALLES
 conecta_con(av_independecia_2, calle_jorge_dominguez).
@@ -260,11 +258,14 @@ conecta_con(blvr_sergio_viera_de_mello, av_de_la_revolucion).
 conecta_con(calle_san_jeronimo_emiliani, calle_antigua_ferrocarril).
 conecta_con(calle_antigua_ferrocarril, calle_san_jeronimo_emiliani).
 
-conecta_con(calle_del_mediterraneo, calle_antigua_ferrocarril).
-conecta_con(calle_antigua_ferrocarril, calle_del_mediterraneo).
+conecta_con(calle_san_jeronimo_emiliani, calle_del_mediterraneo_2).
+conecta_con(calle_del_mediterraneo_2, calle_san_jeronimo_emiliani).
 
-conecta_con(calle_del_mediterraneo_1, blvr_la_sultana_1).
-conecta_con(blvr_la_sultana_1, calle_del_mediterraneo_1).
+conecta_con(calle_del_mediterraneo_2, calle_antigua_ferrocarril).
+conecta_con(calle_antigua_ferrocarril, calle_del_mediterraneo_2).
+
+conecta_con(calle_del_mediterraneo_2, blvr_la_sultana_1).
+conecta_con(blvr_la_sultana_1, calle_del_mediterraneo_2).
 
 conecta_con(blvr_la_sultana_1, calle_antigua_ferrocarril).
 conecta_con(calle_antigua_ferrocarril, blvr_la_sultana_1).
@@ -282,11 +283,6 @@ conecta_con(c_n1_1, av_albert_einstein_1).
 
 conecta_con(los_proceres_9, c_n1_4).
 conecta_con(c_n1_4, los_proceres_9).
-
-conecta_con(los_proceres_10, calle_antigua_a_huizucar_4).
-conecta_con(calle_antigua_a_huizucar_4, los_proceres_10).
-conecta_con(los_proceres_11, calle_antigua_a_huizucar_4).
-conecta_con(calle_antigua_a_huizucar_4, los_proceres_11).
 
 % SUBCALLES
 conecta_con(carretera_panamericana_1, carretera_panamericana_2).
@@ -352,9 +348,6 @@ conecta_con(los_proceres_8, los_proceres_9).
 conecta_con(los_proceres_9, los_proceres_8).
 conecta_con(los_proceres_9, los_proceres_10).
 conecta_con(los_proceres_10, los_proceres_9).
-conecta_con(los_proceres_10, los_proceres_11).
-conecta_con(los_proceres_11, los_proceres_10).
-
 
 
 % Validar lugar X
