@@ -97,6 +97,8 @@ public class Mapa extends javax.swing.JFrame {
         gambetaLosProceresImg = new javax.swing.JLabel();
         cc_acaciasImg = new javax.swing.JLabel();
         parqueDePelotasImg = new javax.swing.JLabel();
+        highlandsToggle = new javax.swing.JToggleButton();
+        ucaToggle = new javax.swing.JToggleButton();
         imagenMapa = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         textBoxP2 = new javax.swing.JTextField();
@@ -266,6 +268,28 @@ public class Mapa extends javax.swing.JFrame {
         getContentPane().add(parqueDePelotasImg);
         parqueDePelotasImg.setBounds(950, 170, 30, 40);
 
+        highlandsToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/highlands_icon.png"))); // NOI18N
+        highlandsToggle.setAlignmentY(0.0F);
+        highlandsToggle.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        highlandsToggle.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                highlandsToggleActionPerformed(evt);
+            }
+        });
+        getContentPane().add(highlandsToggle);
+        highlandsToggle.setBounds(620, 270, 66, 80);
+
+        ucaToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/uca_icon.png"))); // NOI18N
+        ucaToggle.setAlignmentY(0.0F);
+        ucaToggle.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        ucaToggle.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ucaToggleActionPerformed(evt);
+            }
+        });
+        getContentPane().add(ucaToggle);
+        ucaToggle.setBounds(830, 460, 59, 60);
+
         imagenMapa.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         imagenMapa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/mapa.png"))); // NOI18N
         imagenMapa.setIconTextGap(0);
@@ -409,6 +433,28 @@ public class Mapa extends javax.swing.JFrame {
         rutaList.removeAll();
     }//GEN-LAST:event_BtnLimpiarActionPerformed
 
+    private void ucaToggleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ucaToggleActionPerformed
+        validate(ucaToggle, "uca");
+
+    }//GEN-LAST:event_ucaToggleActionPerformed
+
+    private void highlandsToggleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_highlandsToggleActionPerformed
+        validate(highlandsToggle, "colegio_highlands");
+    }//GEN-LAST:event_highlandsToggleActionPerformed
+
+    private void validate(javax.swing.JToggleButton button, String place){
+        if(textBoxP1.getText().equals("punto de partida") && button.isSelected())
+            textBoxP1.setText(place); 
+        else if(textBoxP2.getText().equals("punto de destino") && button.isSelected())
+            textBoxP2.setText(place);
+        else if(textBoxP1.getText().equals(place) && !button.isSelected())
+            textBoxP1.setText("punto de partida");
+        else if(textBoxP2.getText().equals(place) && !button.isSelected())
+            textBoxP2.setText("punto de destino");
+        else
+            button.setSelected(false);
+    }
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -461,6 +507,7 @@ public class Mapa extends javax.swing.JFrame {
     private javax.swing.JLabel escuelaMilitarImg;
     private javax.swing.JLabel estadioCuscatlanImg;
     private javax.swing.JLabel gambetaLosProceresImg;
+    private javax.swing.JToggleButton highlandsToggle;
     private javax.swing.JLabel hospitalImg;
     private javax.swing.JLabel hotelImg;
     private javax.swing.JLabel imagenMapa;
@@ -481,6 +528,7 @@ public class Mapa extends javax.swing.JFrame {
     private javax.swing.JTextField textBoxP1;
     private javax.swing.JTextField textBoxP2;
     private javax.swing.JLabel ucaImg;
+    private javax.swing.JToggleButton ucaToggle;
     private javax.swing.JLabel unoLasLomasImg;
     private javax.swing.JLabel unoSultanaImg;
     private javax.swing.JLabel veterinariaSanFranciscoImg;
