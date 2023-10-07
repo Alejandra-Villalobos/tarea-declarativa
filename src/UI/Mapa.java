@@ -87,7 +87,6 @@ public class Mapa extends javax.swing.JFrame {
         canchaCoopefaImg = new javax.swing.JLabel();
         multiplazaImg = new javax.swing.JLabel();
         veterinariaSanFranciscoImg = new javax.swing.JLabel();
-        veterinariaSantaFeImg = new javax.swing.JLabel();
         unoLasLomasImg = new javax.swing.JLabel();
         ballySportsImg = new javax.swing.JLabel();
         unoSultanaImg = new javax.swing.JLabel();
@@ -97,6 +96,20 @@ public class Mapa extends javax.swing.JFrame {
         gambetaLosProceresImg = new javax.swing.JLabel();
         cc_acaciasImg = new javax.swing.JLabel();
         parqueDePelotasImg = new javax.swing.JLabel();
+        walteToggle = new javax.swing.JToggleButton();
+        capitalToggle = new javax.swing.JToggleButton();
+        texacoCoopefaToggle = new javax.swing.JToggleButton();
+        cuscaToggle = new javax.swing.JToggleButton();
+        gambetaToggle = new javax.swing.JToggleButton();
+        pLomasToggle = new javax.swing.JToggleButton();
+        coopefaToggle = new javax.swing.JToggleButton();
+        ballyToggle = new javax.swing.JToggleButton();
+        pelotasToggle = new javax.swing.JToggleButton();
+        texacoToggle = new javax.swing.JToggleButton();
+        unoSultanaToggle = new javax.swing.JToggleButton();
+        unoLomasToggle = new javax.swing.JToggleButton();
+        hospitalESToggle = new javax.swing.JToggleButton();
+        sanFranciscoToggle = new javax.swing.JToggleButton();
         acaciasToggle = new javax.swing.JToggleButton();
         feriaRosaToggle = new javax.swing.JToggleButton();
         vestidosToggle = new javax.swing.JToggleButton();
@@ -109,6 +122,7 @@ public class Mapa extends javax.swing.JFrame {
         highlandsToggle = new javax.swing.JToggleButton();
         ucaToggle = new javax.swing.JToggleButton();
         imagenMapa = new javax.swing.JLabel();
+        veterinariaSantaFeImg = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         textBoxP2 = new javax.swing.JTextField();
         BtnLimpiar = new javax.swing.JButton();
@@ -227,11 +241,6 @@ public class Mapa extends javax.swing.JFrame {
         getContentPane().add(veterinariaSanFranciscoImg);
         veterinariaSanFranciscoImg.setBounds(890, 530, 27, 40);
 
-        veterinariaSantaFeImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/localizacion.png"))); // NOI18N
-        veterinariaSantaFeImg.setToolTipText("Veterinaria Santa Fe");
-        getContentPane().add(veterinariaSantaFeImg);
-        veterinariaSantaFeImg.setBounds(1110, 300, 30, 40);
-
         unoLasLomasImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/localizacion.png"))); // NOI18N
         unoLasLomasImg.setToolTipText("Uno Las Lomas");
         getContentPane().add(unoLasLomasImg);
@@ -250,7 +259,7 @@ public class Mapa extends javax.swing.JFrame {
         parqueLomasDeSanFranciscoimg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/localizacion.png"))); // NOI18N
         parqueLomasDeSanFranciscoimg.setToolTipText("Parque Lomas San Francisco");
         getContentPane().add(parqueLomasDeSanFranciscoimg);
-        parqueLomasDeSanFranciscoimg.setBounds(920, 450, 30, 40);
+        parqueLomasDeSanFranciscoimg.setBounds(930, 460, 30, 40);
 
         estadioCuscatlanImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/localizacion.png"))); // NOI18N
         estadioCuscatlanImg.setToolTipText("Estadio Cuscatlan");
@@ -276,6 +285,160 @@ public class Mapa extends javax.swing.JFrame {
         parqueDePelotasImg.setToolTipText("Parque de pelotas");
         getContentPane().add(parqueDePelotasImg);
         parqueDePelotasImg.setBounds(950, 170, 30, 40);
+
+        walteToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/walte_icon.png"))); // NOI18N
+        walteToggle.setAlignmentY(0.0F);
+        walteToggle.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        walteToggle.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                walteToggleActionPerformed(evt);
+            }
+        });
+        getContentPane().add(walteToggle);
+        walteToggle.setBounds(640, 420, 90, 80);
+
+        capitalToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/capital_icon.png"))); // NOI18N
+        capitalToggle.setAlignmentY(0.0F);
+        capitalToggle.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        capitalToggle.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                capitalToggleActionPerformed(evt);
+            }
+        });
+        getContentPane().add(capitalToggle);
+        capitalToggle.setBounds(840, 390, 80, 60);
+
+        texacoCoopefaToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/texacoCoopefa_icon.png"))); // NOI18N
+        texacoCoopefaToggle.setAlignmentY(0.0F);
+        texacoCoopefaToggle.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        texacoCoopefaToggle.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                texacoCoopefaToggleActionPerformed(evt);
+            }
+        });
+        getContentPane().add(texacoCoopefaToggle);
+        texacoCoopefaToggle.setBounds(1060, 280, 62, 80);
+
+        cuscaToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/cusca_icon.png"))); // NOI18N
+        cuscaToggle.setAlignmentY(0.0F);
+        cuscaToggle.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        cuscaToggle.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cuscaToggleActionPerformed(evt);
+            }
+        });
+        getContentPane().add(cuscaToggle);
+        cuscaToggle.setBounds(1250, 450, 80, 70);
+
+        gambetaToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/gambeta_icon.png"))); // NOI18N
+        gambetaToggle.setAlignmentY(0.0F);
+        gambetaToggle.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        gambetaToggle.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                gambetaToggleActionPerformed(evt);
+            }
+        });
+        getContentPane().add(gambetaToggle);
+        gambetaToggle.setBounds(1120, 440, 80, 70);
+
+        pLomasToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/parqueLomas_icon.png"))); // NOI18N
+        pLomasToggle.setAlignmentY(0.0F);
+        pLomasToggle.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        pLomasToggle.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pLomasToggleActionPerformed(evt);
+            }
+        });
+        getContentPane().add(pLomasToggle);
+        pLomasToggle.setBounds(980, 470, 70, 70);
+
+        coopefaToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/canchasCoopefa_icon.png"))); // NOI18N
+        coopefaToggle.setAlignmentY(0.0F);
+        coopefaToggle.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        coopefaToggle.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                coopefaToggleActionPerformed(evt);
+            }
+        });
+        getContentPane().add(coopefaToggle);
+        coopefaToggle.setBounds(980, 250, 70, 70);
+
+        ballyToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/bally_icon.png"))); // NOI18N
+        ballyToggle.setAlignmentY(0.0F);
+        ballyToggle.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        ballyToggle.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ballyToggleActionPerformed(evt);
+            }
+        });
+        getContentPane().add(ballyToggle);
+        ballyToggle.setBounds(940, 400, 80, 70);
+
+        pelotasToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/pelotas_icon.png"))); // NOI18N
+        pelotasToggle.setAlignmentY(0.0F);
+        pelotasToggle.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        pelotasToggle.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pelotasToggleActionPerformed(evt);
+            }
+        });
+        getContentPane().add(pelotasToggle);
+        pelotasToggle.setBounds(980, 150, 70, 70);
+
+        texacoToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/texaco_icon.png"))); // NOI18N
+        texacoToggle.setAlignmentY(0.0F);
+        texacoToggle.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        texacoToggle.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                texacoToggleActionPerformed(evt);
+            }
+        });
+        getContentPane().add(texacoToggle);
+        texacoToggle.setBounds(1190, 510, 80, 80);
+
+        unoSultanaToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/unoSultana_icon.png"))); // NOI18N
+        unoSultanaToggle.setAlignmentY(0.0F);
+        unoSultanaToggle.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        unoSultanaToggle.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                unoSultanaToggleActionPerformed(evt);
+            }
+        });
+        getContentPane().add(unoSultanaToggle);
+        unoSultanaToggle.setBounds(660, 490, 60, 80);
+
+        unoLomasToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/unoLomas_icon.png"))); // NOI18N
+        unoLomasToggle.setAlignmentY(0.0F);
+        unoLomasToggle.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        unoLomasToggle.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                unoLomasToggleActionPerformed(evt);
+            }
+        });
+        getContentPane().add(unoLomasToggle);
+        unoLomasToggle.setBounds(810, 530, 60, 80);
+
+        hospitalESToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/hospitalES_icon.png"))); // NOI18N
+        hospitalESToggle.setAlignmentY(0.0F);
+        hospitalESToggle.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        hospitalESToggle.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                hospitalESToggleActionPerformed(evt);
+            }
+        });
+        getContentPane().add(hospitalESToggle);
+        hospitalESToggle.setBounds(840, 160, 66, 80);
+
+        sanFranciscoToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/sanFrancisco_icon.png"))); // NOI18N
+        sanFranciscoToggle.setAlignmentY(0.0F);
+        sanFranciscoToggle.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        sanFranciscoToggle.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sanFranciscoToggleActionPerformed(evt);
+            }
+        });
+        getContentPane().add(sanFranciscoToggle);
+        sanFranciscoToggle.setBounds(920, 520, 70, 80);
 
         acaciasToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/acacias_icon.png"))); // NOI18N
         acaciasToggle.setAlignmentY(0.0F);
@@ -403,6 +566,11 @@ public class Mapa extends javax.swing.JFrame {
         imagenMapa.setIconTextGap(0);
         getContentPane().add(imagenMapa);
         imagenMapa.setBounds(340, 0, 1010, 690);
+
+        veterinariaSantaFeImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/localizacion.png"))); // NOI18N
+        veterinariaSantaFeImg.setToolTipText("Veterinaria Santa Fe");
+        getContentPane().add(veterinariaSantaFeImg);
+        veterinariaSantaFeImg.setBounds(1110, 300, 30, 40);
 
         jPanel1.setBackground(new java.awt.Color(76, 132, 255));
         jPanel1.setLayout(null);
@@ -586,6 +754,62 @@ public class Mapa extends javax.swing.JFrame {
         validate(acaciasToggle, "centro_comercial_las_acacias");
     }//GEN-LAST:event_acaciasToggleActionPerformed
 
+    private void sanFranciscoToggleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sanFranciscoToggleActionPerformed
+        validate(sanFranciscoToggle, "veterinaria_san_francisco");
+    }//GEN-LAST:event_sanFranciscoToggleActionPerformed
+
+    private void hospitalESToggleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hospitalESToggleActionPerformed
+        validate(hospitalESToggle, "hospital_el_salvador");
+    }//GEN-LAST:event_hospitalESToggleActionPerformed
+
+    private void unoLomasToggleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_unoLomasToggleActionPerformed
+        validate(unoLomasToggle, "uno_las_lomas");
+    }//GEN-LAST:event_unoLomasToggleActionPerformed
+
+    private void unoSultanaToggleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_unoSultanaToggleActionPerformed
+        validate(unoSultanaToggle, "uno_la_sultana");
+    }//GEN-LAST:event_unoSultanaToggleActionPerformed
+
+    private void texacoToggleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_texacoToggleActionPerformed
+        validate(texacoToggle, "texaco_loma_linda");
+    }//GEN-LAST:event_texacoToggleActionPerformed
+
+    private void pelotasToggleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pelotasToggleActionPerformed
+        validate(pelotasToggle, "parque_de_pelotas");
+    }//GEN-LAST:event_pelotasToggleActionPerformed
+
+    private void ballyToggleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ballyToggleActionPerformed
+        validate(ballyToggle, "bally_sports_center");
+    }//GEN-LAST:event_ballyToggleActionPerformed
+
+    private void coopefaToggleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_coopefaToggleActionPerformed
+        validate(coopefaToggle, "cancha_coopefa");
+    }//GEN-LAST:event_coopefaToggleActionPerformed
+
+    private void pLomasToggleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pLomasToggleActionPerformed
+        validate(pLomasToggle, "parque_lomas_san_francisco");
+    }//GEN-LAST:event_pLomasToggleActionPerformed
+
+    private void gambetaToggleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gambetaToggleActionPerformed
+        validate(gambetaToggle, "gambeta_los_proceres");
+    }//GEN-LAST:event_gambetaToggleActionPerformed
+
+    private void cuscaToggleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cuscaToggleActionPerformed
+        validate(cuscaToggle, "estadio_cuscatlan");
+    }//GEN-LAST:event_cuscaToggleActionPerformed
+
+    private void texacoCoopefaToggleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_texacoCoopefaToggleActionPerformed
+        validate(texacoCoopefaToggle, "texaco_coopefa");
+    }//GEN-LAST:event_texacoCoopefaToggleActionPerformed
+
+    private void capitalToggleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_capitalToggleActionPerformed
+        validate(capitalToggle, "hotel_capital");
+    }//GEN-LAST:event_capitalToggleActionPerformed
+
+    private void walteToggleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_walteToggleActionPerformed
+        validate(walteToggle, "colegio_augusto_walte");
+    }//GEN-LAST:event_walteToggleActionPerformed
+
     private void validate(javax.swing.JToggleButton button, String place){
         if(textBoxP1.getText().equals("punto de partida") && button.isSelected())
             textBoxP1.setText(place); 
@@ -642,14 +866,18 @@ public class Mapa extends javax.swing.JFrame {
     private javax.swing.JToggleButton alemanaToggle;
     private javax.swing.JLabel avRecolucionariaImg;
     private javax.swing.JLabel ballySportsImg;
+    private javax.swing.JToggleButton ballyToggle;
     private javax.swing.JToggleButton bambuToggle;
     private javax.swing.JLabel blvrSergioVieraImg;
     private javax.swing.JLabel canchaCoopefaImg;
+    private javax.swing.JToggleButton capitalToggle;
     private javax.swing.JLabel casaDeLoVestidosImg;
     private javax.swing.JToggleButton cascadasToggle;
     private javax.swing.JLabel ccFeriaRosaImg;
     private javax.swing.JLabel cc_acaciasImg;
     private javax.swing.JLabel colegioHighlandsImg;
+    private javax.swing.JToggleButton coopefaToggle;
+    private javax.swing.JToggleButton cuscaToggle;
     private javax.swing.JToggleButton emilianiToggle;
     private javax.swing.JLabel enriqueAraujo3Img;
     private javax.swing.JLabel escuelaAlemanaImg;
@@ -657,7 +885,9 @@ public class Mapa extends javax.swing.JFrame {
     private javax.swing.JLabel estadioCuscatlanImg;
     private javax.swing.JToggleButton feriaRosaToggle;
     private javax.swing.JLabel gambetaLosProceresImg;
+    private javax.swing.JToggleButton gambetaToggle;
     private javax.swing.JToggleButton highlandsToggle;
+    private javax.swing.JToggleButton hospitalESToggle;
     private javax.swing.JLabel hospitalImg;
     private javax.swing.JLabel hotelImg;
     private javax.swing.JLabel imagenMapa;
@@ -672,19 +902,27 @@ public class Mapa extends javax.swing.JFrame {
     private javax.swing.JToggleButton militarToggle;
     private javax.swing.JLabel multiplazaImg;
     private javax.swing.JToggleButton multiplazaToggle;
+    private javax.swing.JToggleButton pLomasToggle;
     private javax.swing.JLabel parqueDePelotasImg;
     private javax.swing.JLabel parqueLomasDeSanFranciscoimg;
+    private javax.swing.JToggleButton pelotasToggle;
     private java.awt.List rutaList;
+    private javax.swing.JToggleButton sanFranciscoToggle;
     private javax.swing.JLabel texacoCoopefaImg;
+    private javax.swing.JToggleButton texacoCoopefaToggle;
     private javax.swing.JLabel texacoLomaLindaImg;
+    private javax.swing.JToggleButton texacoToggle;
     private javax.swing.JTextField textBoxP1;
     private javax.swing.JTextField textBoxP2;
     private javax.swing.JLabel ucaImg;
     private javax.swing.JToggleButton ucaToggle;
     private javax.swing.JLabel unoLasLomasImg;
+    private javax.swing.JToggleButton unoLomasToggle;
     private javax.swing.JLabel unoSultanaImg;
+    private javax.swing.JToggleButton unoSultanaToggle;
     private javax.swing.JToggleButton vestidosToggle;
     private javax.swing.JLabel veterinariaSanFranciscoImg;
     private javax.swing.JLabel veterinariaSantaFeImg;
+    private javax.swing.JToggleButton walteToggle;
     // End of variables declaration//GEN-END:variables
 }
