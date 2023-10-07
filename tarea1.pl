@@ -285,6 +285,9 @@ conecta_con(c_n1_1, av_albert_einstein_1).
 conecta_con(los_proceres_9, c_n1_4).
 conecta_con(c_n1_4, los_proceres_9).
 
+conecta_con(calle_antigua_a_huizucar_3, los_proceres_10).
+conecta_con(los_proceres_10, calle_antigua_a_huizucar_3).
+
 % SUBCALLES
 conecta_con(carretera_panamericana_1, carretera_panamericana_2).
 conecta_con(carretera_panamericana_2, carretera_panamericana_1).
@@ -322,8 +325,6 @@ conecta_con(calle_antigua_a_huizucar_1, calle_antigua_a_huizucar_2).
 conecta_con(calle_antigua_a_huizucar_2, calle_antigua_a_huizucar_1).
 conecta_con(calle_antigua_a_huizucar_2, calle_antigua_a_huizucar_3).
 conecta_con(calle_antigua_a_huizucar_3, calle_antigua_a_huizucar_2).
-conecta_con(calle_antigua_a_huizucar_3, calle_antigua_a_huizucar_4).
-conecta_con(calle_antigua_a_huizucar_4, calle_antigua_a_huizucar_3).
 
 conecta_con(av_las_mercedes_1, av_las_mercedes_2).
 conecta_con(av_las_mercedes_2, av_las_mercedes_1).

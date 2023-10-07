@@ -97,6 +97,15 @@ public class Mapa extends javax.swing.JFrame {
         gambetaLosProceresImg = new javax.swing.JLabel();
         cc_acaciasImg = new javax.swing.JLabel();
         parqueDePelotasImg = new javax.swing.JLabel();
+        acaciasToggle = new javax.swing.JToggleButton();
+        feriaRosaToggle = new javax.swing.JToggleButton();
+        vestidosToggle = new javax.swing.JToggleButton();
+        cascadasToggle = new javax.swing.JToggleButton();
+        multiplazaToggle = new javax.swing.JToggleButton();
+        alemanaToggle = new javax.swing.JToggleButton();
+        bambuToggle = new javax.swing.JToggleButton();
+        militarToggle = new javax.swing.JToggleButton();
+        emilianiToggle = new javax.swing.JToggleButton();
         highlandsToggle = new javax.swing.JToggleButton();
         ucaToggle = new javax.swing.JToggleButton();
         imagenMapa = new javax.swing.JLabel();
@@ -267,6 +276,105 @@ public class Mapa extends javax.swing.JFrame {
         parqueDePelotasImg.setToolTipText("Parque de pelotas");
         getContentPane().add(parqueDePelotasImg);
         parqueDePelotasImg.setBounds(950, 170, 30, 40);
+
+        acaciasToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/acacias_icon.png"))); // NOI18N
+        acaciasToggle.setAlignmentY(0.0F);
+        acaciasToggle.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        acaciasToggle.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                acaciasToggleActionPerformed(evt);
+            }
+        });
+        getContentPane().add(acaciasToggle);
+        acaciasToggle.setBounds(1060, 550, 70, 80);
+
+        feriaRosaToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/feria_rosa_icon.png"))); // NOI18N
+        feriaRosaToggle.setAlignmentY(0.0F);
+        feriaRosaToggle.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        feriaRosaToggle.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                feriaRosaToggleActionPerformed(evt);
+            }
+        });
+        getContentPane().add(feriaRosaToggle);
+        feriaRosaToggle.setBounds(800, 300, 80, 80);
+
+        vestidosToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/vestidos_icon.png"))); // NOI18N
+        vestidosToggle.setAlignmentY(0.0F);
+        vestidosToggle.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        vestidosToggle.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                vestidosToggleActionPerformed(evt);
+            }
+        });
+        getContentPane().add(vestidosToggle);
+        vestidosToggle.setBounds(910, 300, 80, 80);
+
+        cascadasToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/cascadas_icon.png"))); // NOI18N
+        cascadasToggle.setAlignmentY(0.0F);
+        cascadasToggle.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        cascadasToggle.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cascadasToggleActionPerformed(evt);
+            }
+        });
+        getContentPane().add(cascadasToggle);
+        cascadasToggle.setBounds(450, 410, 72, 80);
+
+        multiplazaToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/multiplaza_icon.png"))); // NOI18N
+        multiplazaToggle.setAlignmentY(0.0F);
+        multiplazaToggle.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        multiplazaToggle.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                multiplazaToggleActionPerformed(evt);
+            }
+        });
+        getContentPane().add(multiplazaToggle);
+        multiplazaToggle.setBounds(370, 460, 72, 80);
+
+        alemanaToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/alemana_icon.png"))); // NOI18N
+        alemanaToggle.setAlignmentY(0.0F);
+        alemanaToggle.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        alemanaToggle.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                alemanaToggleActionPerformed(evt);
+            }
+        });
+        getContentPane().add(alemanaToggle);
+        alemanaToggle.setBounds(760, 450, 66, 80);
+
+        bambuToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/bambu_icon.png"))); // NOI18N
+        bambuToggle.setAlignmentY(0.0F);
+        bambuToggle.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bambuToggle.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bambuToggleActionPerformed(evt);
+            }
+        });
+        getContentPane().add(bambuToggle);
+        bambuToggle.setBounds(740, 60, 72, 80);
+
+        militarToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/militar_icon.png"))); // NOI18N
+        militarToggle.setAlignmentY(0.0F);
+        militarToggle.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        militarToggle.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                militarToggleActionPerformed(evt);
+            }
+        });
+        getContentPane().add(militarToggle);
+        militarToggle.setBounds(910, 220, 66, 80);
+
+        emilianiToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/emiliani_icon.png"))); // NOI18N
+        emilianiToggle.setAlignmentY(0.0F);
+        emilianiToggle.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        emilianiToggle.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                emilianiToggleActionPerformed(evt);
+            }
+        });
+        getContentPane().add(emilianiToggle);
+        emilianiToggle.setBounds(580, 360, 66, 80);
 
         highlandsToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/highlands_icon.png"))); // NOI18N
         highlandsToggle.setAlignmentY(0.0F);
@@ -442,6 +550,42 @@ public class Mapa extends javax.swing.JFrame {
         validate(highlandsToggle, "colegio_highlands");
     }//GEN-LAST:event_highlandsToggleActionPerformed
 
+    private void emilianiToggleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emilianiToggleActionPerformed
+        validate(emilianiToggle, "instituto_tecnico_emiliani");
+    }//GEN-LAST:event_emilianiToggleActionPerformed
+
+    private void alemanaToggleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alemanaToggleActionPerformed
+        validate(alemanaToggle, "escuela_alemana");
+    }//GEN-LAST:event_alemanaToggleActionPerformed
+
+    private void militarToggleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_militarToggleActionPerformed
+        validate(militarToggle, "escuela_militar");
+    }//GEN-LAST:event_militarToggleActionPerformed
+
+    private void bambuToggleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bambuToggleActionPerformed
+        validate(bambuToggle, "centro_comercial_bambu");
+    }//GEN-LAST:event_bambuToggleActionPerformed
+
+    private void multiplazaToggleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multiplazaToggleActionPerformed
+        validate(multiplazaToggle, "multiplaza");
+    }//GEN-LAST:event_multiplazaToggleActionPerformed
+
+    private void cascadasToggleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cascadasToggleActionPerformed
+        validate(cascadasToggle, "las_cascadas");
+    }//GEN-LAST:event_cascadasToggleActionPerformed
+
+    private void vestidosToggleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vestidosToggleActionPerformed
+        validate(vestidosToggle, "la_casa_de_los_vestidos");
+    }//GEN-LAST:event_vestidosToggleActionPerformed
+
+    private void feriaRosaToggleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_feriaRosaToggleActionPerformed
+        validate(feriaRosaToggle, "centro_comercial_feria_rosa");
+    }//GEN-LAST:event_feriaRosaToggleActionPerformed
+
+    private void acaciasToggleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acaciasToggleActionPerformed
+        validate(acaciasToggle, "centro_comercial_las_acacias");
+    }//GEN-LAST:event_acaciasToggleActionPerformed
+
     private void validate(javax.swing.JToggleButton button, String place){
         if(textBoxP1.getText().equals("punto de partida") && button.isSelected())
             textBoxP1.setText(place); 
@@ -494,18 +638,24 @@ public class Mapa extends javax.swing.JFrame {
     private javax.swing.JButton BtnLimpiar;
     private javax.swing.JLabel CCBambuImg;
     private javax.swing.JLabel ColegioWalteImg;
+    private javax.swing.JToggleButton acaciasToggle;
+    private javax.swing.JToggleButton alemanaToggle;
     private javax.swing.JLabel avRecolucionariaImg;
     private javax.swing.JLabel ballySportsImg;
+    private javax.swing.JToggleButton bambuToggle;
     private javax.swing.JLabel blvrSergioVieraImg;
     private javax.swing.JLabel canchaCoopefaImg;
     private javax.swing.JLabel casaDeLoVestidosImg;
+    private javax.swing.JToggleButton cascadasToggle;
     private javax.swing.JLabel ccFeriaRosaImg;
     private javax.swing.JLabel cc_acaciasImg;
     private javax.swing.JLabel colegioHighlandsImg;
+    private javax.swing.JToggleButton emilianiToggle;
     private javax.swing.JLabel enriqueAraujo3Img;
     private javax.swing.JLabel escuelaAlemanaImg;
     private javax.swing.JLabel escuelaMilitarImg;
     private javax.swing.JLabel estadioCuscatlanImg;
+    private javax.swing.JToggleButton feriaRosaToggle;
     private javax.swing.JLabel gambetaLosProceresImg;
     private javax.swing.JToggleButton highlandsToggle;
     private javax.swing.JLabel hospitalImg;
@@ -519,7 +669,9 @@ public class Mapa extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JLabel lasCascadasImg;
+    private javax.swing.JToggleButton militarToggle;
     private javax.swing.JLabel multiplazaImg;
+    private javax.swing.JToggleButton multiplazaToggle;
     private javax.swing.JLabel parqueDePelotasImg;
     private javax.swing.JLabel parqueLomasDeSanFranciscoimg;
     private java.awt.List rutaList;
@@ -531,6 +683,7 @@ public class Mapa extends javax.swing.JFrame {
     private javax.swing.JToggleButton ucaToggle;
     private javax.swing.JLabel unoLasLomasImg;
     private javax.swing.JLabel unoSultanaImg;
+    private javax.swing.JToggleButton vestidosToggle;
     private javax.swing.JLabel veterinariaSanFranciscoImg;
     private javax.swing.JLabel veterinariaSantaFeImg;
     // End of variables declaration//GEN-END:variables
