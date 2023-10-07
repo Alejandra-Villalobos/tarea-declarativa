@@ -57,10 +57,47 @@ public class Mapa extends javax.swing.JFrame {
         lugarImagenes.put("estadio_cuscatlan", estadioCuscatlanImg);
         
         //calles
+        lugarImagenes.put("calle_uca",ucaCalleImg);
         lugarImagenes.put("blvr_sergio_viera_de_mello",blvrSergioVieraImg);
         lugarImagenes.put("av_de_la_revolucion",avRecolucionariaImg );
-        lugarImagenes.put("alameda_manuel_enrique_araujo_3", enriqueAraujo3Img);
-        
+        lugarImagenes.put("av_las_mercedes_1",avLasMercedes1Img );
+        lugarImagenes.put("av_las_mercedes_2",avLasMercedes2Img );
+        lugarImagenes.put("calle_capitan_douglas_varela",calleDouglasVarelaImg );
+        lugarImagenes.put("av_independecia_1",avIndependencia1Img );
+        lugarImagenes.put("av_independecia_2",avIndependencia2Img );
+        lugarImagenes.put("carretera_panamericana_1",carreteraPanamericana1Img );
+        lugarImagenes.put("carretera_panamericana_2",carreteraPanamericana2Img );
+        lugarImagenes.put("carretera_panamericana_3",carreteraPanamericana3Img );   
+        lugarImagenes.put("alameda_manuel_enrique_araujo_1",manuelEnriqueAraujo1Img );
+        lugarImagenes.put("alameda_manuel_enrique_araujo_2",manuelEnriqueAraujo2Img );
+        lugarImagenes.put("alameda_manuel_enrique_araujo_3",manuelEnriqueAraujo3Img );
+        lugarImagenes.put("alameda_manuel_enrique_araujo_4",manuelEnriqueAraujo4Img );
+        lugarImagenes.put("av_de_la_revolucion",avRecolucionariaImg );
+        lugarImagenes.put("blvr_sergio_viera_de_mello",blvrSergioVieraImg );
+        lugarImagenes.put("calle_san_jeronimo_emiliani",calleSanJeronmoEmilianiImg );
+        lugarImagenes.put("calle_antigua_ferrocarril",calleAntiguaFerrocarril );
+        lugarImagenes.put("calle_del_mediterraneo_1",calleMediterraneo1Img );
+        lugarImagenes.put("calle_del_mediterraneo_2",calleMediterraneo2Img );
+        lugarImagenes.put("blvr_la_sultana_1",laSultana1Img );
+        lugarImagenes.put("blvr_la_sultana_2",laSultana2Img );
+        lugarImagenes.put("blvr_la_sultana_3",laSultana3Img );
+        lugarImagenes.put("los_proceres_1",proceres1Img );
+        lugarImagenes.put("los_proceres_2",proceres2Img );
+        lugarImagenes.put("los_proceres_3",proceres3Img );
+        lugarImagenes.put("los_proceres_4",proceres4Img );
+        lugarImagenes.put("calle_jorge_dominguez",calleJorgeDominguezImg );
+        lugarImagenes.put("colonia_general_arce",coloniaGeneralArceImg );
+        lugarImagenes.put("av_albert_einstein_1",avAlbertEinstein1Img );
+        lugarImagenes.put("av_albert_einstein_2",avAlbertEinstein2Img );
+        lugarImagenes.put("av_albert_einstein_3",avAlbertEinstein3Img1 );
+        lugarImagenes.put("c_n1_1",cn1_1 );
+        lugarImagenes.put("c_n1_2",cn1_2Img );
+        lugarImagenes.put("c_n1_3",cn1_3Img );
+        lugarImagenes.put("c_n1_4",cn1_4Img );
+        lugarImagenes.put("calle_antigua_a_huizucar_1",calleHuizucar1Img );
+        lugarImagenes.put("calle_antigua_a_huizucar_2",calleHuizucar2Img );
+        lugarImagenes.put("calle_antigua_a_huizucar_3",calleHuizucar3Img );
+               
         ocultarRutas();
     }
 
@@ -72,7 +109,6 @@ public class Mapa extends javax.swing.JFrame {
         hospitalImg = new javax.swing.JLabel();
         ucaImg = new javax.swing.JLabel();
         hotelImg = new javax.swing.JLabel();
-        enriqueAraujo3Img = new javax.swing.JLabel();
         blvrSergioVieraImg = new javax.swing.JLabel();
         avRecolucionariaImg = new javax.swing.JLabel();
         CCBambuImg = new javax.swing.JLabel();
@@ -97,6 +133,42 @@ public class Mapa extends javax.swing.JFrame {
         gambetaLosProceresImg = new javax.swing.JLabel();
         cc_acaciasImg = new javax.swing.JLabel();
         parqueDePelotasImg = new javax.swing.JLabel();
+        carreteraPanamericana1Img = new javax.swing.JLabel();
+        carreteraPanamericana2Img = new javax.swing.JLabel();
+        carreteraPanamericana3Img = new javax.swing.JLabel();
+        avLasMercedes2Img = new javax.swing.JLabel();
+        avLasMercedes1Img = new javax.swing.JLabel();
+        avIndependencia1Img = new javax.swing.JLabel();
+        avIndependencia2Img = new javax.swing.JLabel();
+        calleJorgeDominguezImg = new javax.swing.JLabel();
+        calleDouglasVarelaImg = new javax.swing.JLabel();
+        coloniaGeneralArceImg = new javax.swing.JLabel();
+        ucaCalleImg = new javax.swing.JLabel();
+        laSultana1Img = new javax.swing.JLabel();
+        laSultana2Img = new javax.swing.JLabel();
+        laSultana3Img = new javax.swing.JLabel();
+        calleSanJeronmoEmilianiImg = new javax.swing.JLabel();
+        calleAntiguaFerrocarril = new javax.swing.JLabel();
+        calleMediterraneo2Img = new javax.swing.JLabel();
+        calleMediterraneo1Img = new javax.swing.JLabel();
+        avAlbertEinstein2Img = new javax.swing.JLabel();
+        avAlbertEinstein3Img1 = new javax.swing.JLabel();
+        avAlbertEinstein1Img = new javax.swing.JLabel();
+        manuelEnriqueAraujo3Img = new javax.swing.JLabel();
+        manuelEnriqueAraujo2Img = new javax.swing.JLabel();
+        manuelEnriqueAraujo1Img = new javax.swing.JLabel();
+        manuelEnriqueAraujo4Img = new javax.swing.JLabel();
+        cn1_3Img = new javax.swing.JLabel();
+        cn1_4Img = new javax.swing.JLabel();
+        cn1_2Img = new javax.swing.JLabel();
+        cn1_1 = new javax.swing.JLabel();
+        calleHuizucar1Img = new javax.swing.JLabel();
+        calleHuizucar2Img = new javax.swing.JLabel();
+        calleHuizucar3Img = new javax.swing.JLabel();
+        proceres4Img = new javax.swing.JLabel();
+        proceres3Img = new javax.swing.JLabel();
+        proceres2Img = new javax.swing.JLabel();
+        proceres1Img = new javax.swing.JLabel();
         imagenMapa = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         textBoxP2 = new javax.swing.JTextField();
@@ -137,12 +209,7 @@ public class Mapa extends javax.swing.JFrame {
         hotelImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/localizacion.png"))); // NOI18N
         hotelImg.setToolTipText("hotel capital");
         getContentPane().add(hotelImg);
-        hotelImg.setBounds(820, 370, 30, 50);
-
-        enriqueAraujo3Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/alamedaEnriqueAraujo3.png"))); // NOI18N
-        enriqueAraujo3Img.setToolTipText("Alameda Manuel Enrique Araujo");
-        getContentPane().add(enriqueAraujo3Img);
-        enriqueAraujo3Img.setBounds(820, 270, 43, 20);
+        hotelImg.setBounds(800, 370, 30, 50);
 
         blvrSergioVieraImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/blvrSergioViera.png"))); // NOI18N
         blvrSergioVieraImg.setToolTipText("Bulevar Sergio Viera");
@@ -184,12 +251,12 @@ public class Mapa extends javax.swing.JFrame {
         ccFeriaRosaImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/localizacion.png"))); // NOI18N
         ccFeriaRosaImg.setToolTipText("Centro Comercial Feria Rosa");
         getContentPane().add(ccFeriaRosaImg);
-        ccFeriaRosaImg.setBounds(790, 300, 30, 40);
+        ccFeriaRosaImg.setBounds(800, 300, 30, 40);
 
         colegioHighlandsImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/localizacion.png"))); // NOI18N
         colegioHighlandsImg.setToolTipText("Colegio Highlands");
         getContentPane().add(colegioHighlandsImg);
-        colegioHighlandsImg.setBounds(680, 310, 30, 40);
+        colegioHighlandsImg.setBounds(780, 260, 30, 40);
 
         ColegioWalteImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/localizacion.png"))); // NOI18N
         ColegioWalteImg.setToolTipText("Colegio Augusto Walte");
@@ -199,7 +266,7 @@ public class Mapa extends javax.swing.JFrame {
         institutoEmilianiImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/localizacion.png"))); // NOI18N
         institutoEmilianiImg.setToolTipText("Instituto Tecnico Emiliani");
         getContentPane().add(institutoEmilianiImg);
-        institutoEmilianiImg.setBounds(640, 380, 30, 40);
+        institutoEmilianiImg.setBounds(673, 370, 27, 40);
 
         canchaCoopefaImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/localizacion.png"))); // NOI18N
         canchaCoopefaImg.setToolTipText("Cancha Coopefa");
@@ -266,8 +333,160 @@ public class Mapa extends javax.swing.JFrame {
         getContentPane().add(parqueDePelotasImg);
         parqueDePelotasImg.setBounds(950, 170, 30, 40);
 
+        carreteraPanamericana1Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/carreteraPanamericana1.png"))); // NOI18N
+        carreteraPanamericana1Img.setToolTipText("Carretera panamericana");
+        getContentPane().add(carreteraPanamericana1Img);
+        carreteraPanamericana1Img.setBounds(390, 530, 110, 60);
+
+        carreteraPanamericana2Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/carreteraPanamericana2.png"))); // NOI18N
+        carreteraPanamericana2Img.setToolTipText("Carretera Panamericana");
+        getContentPane().add(carreteraPanamericana2Img);
+        carreteraPanamericana2Img.setBounds(480, 420, 200, 120);
+
+        carreteraPanamericana3Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/carreteraPanamericana3.png"))); // NOI18N
+        carreteraPanamericana3Img.setToolTipText("Carretera Panamericana");
+        getContentPane().add(carreteraPanamericana3Img);
+        carreteraPanamericana3Img.setBounds(670, 360, 60, 60);
+
+        avLasMercedes2Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/calle_las_mercedes2.png"))); // NOI18N
+        avLasMercedes2Img.setToolTipText("Calles Las Mercedes");
+        getContentPane().add(avLasMercedes2Img);
+        avLasMercedes2Img.setBounds(1040, 250, 40, 90);
+
+        avLasMercedes1Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/calle_las_mercedes1.png"))); // NOI18N
+        avLasMercedes1Img.setToolTipText("Calles Las Mercedes");
+        getContentPane().add(avLasMercedes1Img);
+        avLasMercedes1Img.setBounds(980, 180, 70, 80);
+
+        avIndependencia1Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/av_independecia_1.png"))); // NOI18N
+        getContentPane().add(avIndependencia1Img);
+        avIndependencia1Img.setBounds(930, 240, 120, 60);
+
+        avIndependencia2Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/av_independecia_2.png"))); // NOI18N
+        getContentPane().add(avIndependencia2Img);
+        avIndependencia2Img.setBounds(900, 270, 40, 90);
+
+        calleJorgeDominguezImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/calle_jorge_dominguez.png"))); // NOI18N
+        getContentPane().add(calleJorgeDominguezImg);
+        calleJorgeDominguezImg.setBounds(900, 340, 19, 16);
+
+        calleDouglasVarelaImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/calle_capitan_douglas_varela.png"))); // NOI18N
+        getContentPane().add(calleDouglasVarelaImg);
+        calleDouglasVarelaImg.setBounds(1000, 320, 60, 27);
+
+        coloniaGeneralArceImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/colonia_general_arce.png"))); // NOI18N
+        getContentPane().add(coloniaGeneralArceImg);
+        coloniaGeneralArceImg.setBounds(1010, 340, 10, 20);
+
+        ucaCalleImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/ucaCalle.png"))); // NOI18N
+        getContentPane().add(ucaCalleImg);
+        ucaCalleImg.setBounds(810, 430, 50, 30);
+
+        laSultana1Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/blvr la sultana 1.png"))); // NOI18N
+        getContentPane().add(laSultana1Img);
+        laSultana1Img.setBounds(720, 430, 100, 80);
+
+        laSultana2Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/blvr la sultana 2.png"))); // NOI18N
+        getContentPane().add(laSultana2Img);
+        laSultana2Img.setBounds(810, 410, 20, 30);
+
+        laSultana3Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/blvr la sultana 3.png"))); // NOI18N
+        getContentPane().add(laSultana3Img);
+        laSultana3Img.setBounds(820, 380, 15, 34);
+
+        calleSanJeronmoEmilianiImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/calle_san_jeronimo_emiliani.png"))); // NOI18N
+        getContentPane().add(calleSanJeronmoEmilianiImg);
+        calleSanJeronmoEmilianiImg.setBounds(640, 480, 30, 60);
+
+        calleAntiguaFerrocarril.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/calle_antigua_ferrocarril.png"))); // NOI18N
+        getContentPane().add(calleAntiguaFerrocarril);
+        calleAntiguaFerrocarril.setBounds(640, 500, 88, 43);
+
+        calleMediterraneo2Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/mediterraneo_2.png"))); // NOI18N
+        getContentPane().add(calleMediterraneo2Img);
+        calleMediterraneo2Img.setBounds(725, 490, 70, 50);
+
+        calleMediterraneo1Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/mediterraneo_1.png"))); // NOI18N
+        getContentPane().add(calleMediterraneo1Img);
+        calleMediterraneo1Img.setBounds(780, 520, 100, 50);
+
+        avAlbertEinstein2Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/albert_einstein_2.png"))); // NOI18N
+        getContentPane().add(avAlbertEinstein2Img);
+        avAlbertEinstein2Img.setBounds(890, 471, 20, 30);
+
+        avAlbertEinstein3Img1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/albert_einstein_3.png"))); // NOI18N
+        getContentPane().add(avAlbertEinstein3Img1);
+        avAlbertEinstein3Img1.setBounds(900, 390, 78, 90);
+
+        avAlbertEinstein1Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/albert_einstein_1.png"))); // NOI18N
+        getContentPane().add(avAlbertEinstein1Img);
+        avAlbertEinstein1Img.setBounds(870, 490, 30, 70);
+
+        manuelEnriqueAraujo3Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/alamedaEnriqueAraujo3.png"))); // NOI18N
+        getContentPane().add(manuelEnriqueAraujo3Img);
+        manuelEnriqueAraujo3Img.setBounds(800, 280, 30, 40);
+
+        manuelEnriqueAraujo2Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/alamedaEnriqueAraujo2.png"))); // NOI18N
+        getContentPane().add(manuelEnriqueAraujo2Img);
+        manuelEnriqueAraujo2Img.setBounds(790, 291, 20, 40);
+
+        manuelEnriqueAraujo1Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/alamedaEnriqueAraujo1.png"))); // NOI18N
+        manuelEnriqueAraujo1Img.setToolTipText("Alameda Manuel Enrique Araujo");
+        getContentPane().add(manuelEnriqueAraujo1Img);
+        manuelEnriqueAraujo1Img.setBounds(730, 300, 60, 80);
+
+        manuelEnriqueAraujo4Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/alamedaEnriqueAraujo4.png"))); // NOI18N
+        manuelEnriqueAraujo4Img.setToolTipText("Alameda Manuel Enrique Araujo");
+        getContentPane().add(manuelEnriqueAraujo4Img);
+        manuelEnriqueAraujo4Img.setBounds(830, 170, 170, 130);
+
+        cn1_3Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/cn1_3.png"))); // NOI18N
+        getContentPane().add(cn1_3Img);
+        cn1_3Img.setBounds(950, 430, 170, 120);
+
+        cn1_4Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/cn1_4.png"))); // NOI18N
+        getContentPane().add(cn1_4Img);
+        cn1_4Img.setBounds(1090, 390, 60, 100);
+
+        cn1_2Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/cn1_2.png"))); // NOI18N
+        getContentPane().add(cn1_2Img);
+        cn1_2Img.setBounds(910, 500, 40, 70);
+
+        cn1_1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/cn1_1.png"))); // NOI18N
+        getContentPane().add(cn1_1);
+        cn1_1.setBounds(880, 554, 40, 20);
+
+        calleHuizucar1Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/calle_huizucar1.png"))); // NOI18N
+        getContentPane().add(calleHuizucar1Img);
+        calleHuizucar1Img.setBounds(1140, 540, 40, 80);
+
+        calleHuizucar2Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/calle_huizucar2.png"))); // NOI18N
+        getContentPane().add(calleHuizucar2Img);
+        calleHuizucar2Img.setBounds(1165, 440, 90, 120);
+
+        calleHuizucar3Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/calle_huizucar3.png"))); // NOI18N
+        getContentPane().add(calleHuizucar3Img);
+        calleHuizucar3Img.setBounds(1240, 370, 30, 69);
+
+        proceres4Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/los_proceres4.png"))); // NOI18N
+        getContentPane().add(proceres4Img);
+        proceres4Img.setBounds(1132, 360, 130, 41);
+
+        proceres3Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/los_proceres3.png"))); // NOI18N
+        getContentPane().add(proceres3Img);
+        proceres3Img.setBounds(970, 380, 170, 30);
+
+        proceres2Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/los_proceres2.png"))); // NOI18N
+        getContentPane().add(proceres2Img);
+        proceres2Img.setBounds(830, 380, 140, 20);
+
+        proceres1Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/los_proceres1.png"))); // NOI18N
+        getContentPane().add(proceres1Img);
+        proceres1Img.setBounds(730, 370, 100, 20);
+
         imagenMapa.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         imagenMapa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/mapa.png"))); // NOI18N
+        imagenMapa.setToolTipText("");
         imagenMapa.setIconTextGap(0);
         getContentPane().add(imagenMapa);
         imagenMapa.setBounds(340, 0, 1010, 690);
@@ -372,6 +591,7 @@ public class Mapa extends javax.swing.JFrame {
     
     private void BtnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnBuscarActionPerformed
         rutaList.removeAll();
+        ocultarRutas();
 
         String t1 = "consult('tarea1.pl')";
         Query q1 = new Query(t1);
@@ -438,8 +658,7 @@ public class Mapa extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Mapa().setVisible(true);
-            }
-            
+            } 
         });
     }
 
@@ -448,15 +667,38 @@ public class Mapa extends javax.swing.JFrame {
     private javax.swing.JButton BtnLimpiar;
     private javax.swing.JLabel CCBambuImg;
     private javax.swing.JLabel ColegioWalteImg;
+    private javax.swing.JLabel avAlbertEinstein1Img;
+    private javax.swing.JLabel avAlbertEinstein2Img;
+    private javax.swing.JLabel avAlbertEinstein3Img1;
+    private javax.swing.JLabel avIndependencia1Img;
+    private javax.swing.JLabel avIndependencia2Img;
+    private javax.swing.JLabel avLasMercedes1Img;
+    private javax.swing.JLabel avLasMercedes2Img;
     private javax.swing.JLabel avRecolucionariaImg;
     private javax.swing.JLabel ballySportsImg;
     private javax.swing.JLabel blvrSergioVieraImg;
+    private javax.swing.JLabel calleAntiguaFerrocarril;
+    private javax.swing.JLabel calleDouglasVarelaImg;
+    private javax.swing.JLabel calleHuizucar1Img;
+    private javax.swing.JLabel calleHuizucar2Img;
+    private javax.swing.JLabel calleHuizucar3Img;
+    private javax.swing.JLabel calleJorgeDominguezImg;
+    private javax.swing.JLabel calleMediterraneo1Img;
+    private javax.swing.JLabel calleMediterraneo2Img;
+    private javax.swing.JLabel calleSanJeronmoEmilianiImg;
     private javax.swing.JLabel canchaCoopefaImg;
+    private javax.swing.JLabel carreteraPanamericana1Img;
+    private javax.swing.JLabel carreteraPanamericana2Img;
+    private javax.swing.JLabel carreteraPanamericana3Img;
     private javax.swing.JLabel casaDeLoVestidosImg;
     private javax.swing.JLabel ccFeriaRosaImg;
     private javax.swing.JLabel cc_acaciasImg;
+    private javax.swing.JLabel cn1_1;
+    private javax.swing.JLabel cn1_2Img;
+    private javax.swing.JLabel cn1_3Img;
+    private javax.swing.JLabel cn1_4Img;
     private javax.swing.JLabel colegioHighlandsImg;
-    private javax.swing.JLabel enriqueAraujo3Img;
+    private javax.swing.JLabel coloniaGeneralArceImg;
     private javax.swing.JLabel escuelaAlemanaImg;
     private javax.swing.JLabel escuelaMilitarImg;
     private javax.swing.JLabel estadioCuscatlanImg;
@@ -471,15 +713,27 @@ public class Mapa extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JLabel laSultana1Img;
+    private javax.swing.JLabel laSultana2Img;
+    private javax.swing.JLabel laSultana3Img;
     private javax.swing.JLabel lasCascadasImg;
+    private javax.swing.JLabel manuelEnriqueAraujo1Img;
+    private javax.swing.JLabel manuelEnriqueAraujo2Img;
+    private javax.swing.JLabel manuelEnriqueAraujo3Img;
+    private javax.swing.JLabel manuelEnriqueAraujo4Img;
     private javax.swing.JLabel multiplazaImg;
     private javax.swing.JLabel parqueDePelotasImg;
     private javax.swing.JLabel parqueLomasDeSanFranciscoimg;
+    private javax.swing.JLabel proceres1Img;
+    private javax.swing.JLabel proceres2Img;
+    private javax.swing.JLabel proceres3Img;
+    private javax.swing.JLabel proceres4Img;
     private java.awt.List rutaList;
     private javax.swing.JLabel texacoCoopefaImg;
     private javax.swing.JLabel texacoLomaLindaImg;
     private javax.swing.JTextField textBoxP1;
     private javax.swing.JTextField textBoxP2;
+    private javax.swing.JLabel ucaCalleImg;
     private javax.swing.JLabel ucaImg;
     private javax.swing.JLabel unoLasLomasImg;
     private javax.swing.JLabel unoSultanaImg;

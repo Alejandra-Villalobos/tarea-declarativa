@@ -69,12 +69,6 @@ calle(los_proceres_1).
 calle(los_proceres_2).
 calle(los_proceres_3).
 calle(los_proceres_4).
-calle(los_proceres_5).
-calle(los_proceres_6).
-calle(los_proceres_7).
-calle(los_proceres_8).
-calle(los_proceres_9).
-calle(los_proceres_10).
 
 calle(calle_jorge_dominguez).
 
@@ -95,6 +89,11 @@ calle(calle_antigua_a_huizucar_3).
 
 calle(calle_uca).
 
+calle(interseccion_proceres_albert_einstein)
+calle(interseccion_proceres_c_n1_4)
+calle(interseccion_mediterraneo_einstein_c_n1_1)
+
+
 % Conecta_con/2
 % ESTABLECIMIENTOS-CALLES
 
@@ -110,20 +109,13 @@ conecta_con(alameda_manuel_enrique_araujo_4, parque_de_pelotas).
 conecta_con(centro_comercial_bambu, blvr_sergio_viera_de_mello).
 conecta_con(blvr_sergio_viera_de_mello, centro_comercial_bambu).
 
-conecta_con(hospital_el_salvador, alameda_manuel_enrique_araujo_2).
-conecta_con(alameda_manuel_enrique_araujo_2, hospital_el_salvador).
+conecta_con(hospital_el_salvador, alameda_manuel_enrique_araujo_3).
+conecta_con(alameda_manuel_enrique_araujo_3, hospital_el_salvador).
 
 conecta_con(centro_comercial_feria_rosa, alameda_manuel_enrique_araujo_1).
 conecta_con(alameda_manuel_enrique_araujo_1, centro_comercial_feria_rosa).
 conecta_con(centro_comercial_feria_rosa, alameda_manuel_enrique_araujo_2).
 conecta_con(alameda_manuel_enrique_araujo_2, centro_comercial_feria_rosa).
-conecta_con(centro_comercial_feria_rosa, los_proceres_2).
-conecta_con(los_proceres_2, centro_comercial_feria_rosa).
-conecta_con(centro_comercial_feria_rosa, los_proceres_3).
-conecta_con(los_proceres_3, centro_comercial_feria_rosa).
-
-conecta_con(colegio_highlands, los_proceres_1).
-conecta_con(los_proceres_1, colegio_highlands).
 
 conecta_con(carretera_panamericana_2, instituto_tecnico_emiliani).
 conecta_con(instituto_tecnico_emiliani, carretera_panamericana_2).
@@ -146,33 +138,30 @@ conecta_con(hotel_capital, blvr_la_sultana_2).
 conecta_con(blvr_la_sultana_3, hotel_capital).
 conecta_con(hotel_capital, blvr_la_sultana_3).
 
-conecta_con(blvr_la_sultana_1, calle_uca).
-conecta_con(calle_uca, blvr_la_sultana_1).
 conecta_con(blvr_la_sultana_2, calle_uca).
 conecta_con(calle_uca, blvr_la_sultana_2).
+conecta_con(blvr_la_sultana_1, calle_uca).
+conecta_con(calle_uca, blvr_la_sultana_1).
 
 conecta_con(uca, calle_uca).
 conecta_con(calle_uca, uca).
-conecta_con(los_proceres_4, uca).
-conecta_con(uca, los_proceres_4).
-conecta_con(los_proceres_5, uca).
-conecta_con(uca, los_proceres_5).
-conecta_con(av_albert_einstein_1, uca).
-conecta_con(uca, av_albert_einstein_1).
-conecta_con(av_albert_einstein_2, uca).
-conecta_con(uca, av_albert_einstein_2).
 
+conecta_con(blvr_la_sultana_1, uno_la_sultana).
+conecta_con(uno_la_sultana, blvr_la_sultana_1).
+conecta_con(calle_antigua_ferrocarril, uno_la_sultana).
+conecta_con(uno_la_sultana, calle_antigua_ferrocarril).
 conecta_con(calle_del_mediterraneo_2, uno_la_sultana).
 conecta_con(uno_la_sultana, calle_del_mediterraneo_2).
-conecta_con(uno_la_sultana, calle_antigua_ferrocarril).
-conecta_con(calle_antigua_ferrocarril, uno_la_sultana).
-conecta_con(uno_la_sultana, blvr_la_sultana_1).
-conecta_con(blvr_la_sultana_1, uno_la_sultana).
 
 conecta_con(calle_del_mediterraneo_1, escuela_alemana).
 conecta_con(escuela_alemana, calle_del_mediterraneo_1).
 conecta_con(calle_del_mediterraneo_2, escuela_alemana).
 conecta_con(escuela_alemana, calle_del_mediterraneo_2).
+
+conecta_con(interseccion_mediterraneo_einstein_c_n1_1, calle_del_mediterraneo_1).
+conecta_con( calle_del_mediterraneo_1, interseccion_mediterraneo_einstein_c_n1_1).
+conecta_con(interseccion_mediterraneo_einstein_c_n1_1, av_albert_einstein_1).
+conecta_con( av_albert_einstein_1, interseccion_mediterraneo_einstein_c_n1_1).
 
 conecta_con(calle_jorge_dominguez, la_casa_de_los_vestidos).
 conecta_con(la_casa_de_los_vestidos, calle_jorge_dominguez).
@@ -240,50 +229,48 @@ conecta_con(colonia_general_arce, calle_capitan_douglas_varela).
 conecta_con(carretera_panamericana_3, alameda_manuel_enrique_araujo_1).
 conecta_con(alameda_manuel_enrique_araujo_1, carretera_panamericana_3).
 
-conecta_con(carretera_panamericana_3, los_proceres_1).
-conecta_con(los_proceres_1, carretera_panamericana_3).
-conecta_con(carretera_panamericana_3, los_proceres_2).
-conecta_con(los_proceres_2, carretera_panamericana_3).
-
-conecta_con(los_proceres_1, alameda_manuel_enrique_araujo_1).
-conecta_con(alameda_manuel_enrique_araujo_1, los_proceres_1).
-conecta_con(los_proceres_2, alameda_manuel_enrique_araujo_1).
-conecta_con(alameda_manuel_enrique_araujo_1, los_proceres_2).
-
-conecta_con(av_de_la_revolucion, alameda_manuel_enrique_araujo_3).
-conecta_con(alameda_manuel_enrique_araujo_3, av_de_la_revolucion).
-
 conecta_con(av_de_la_revolucion, blvr_sergio_viera_de_mello).
 conecta_con(blvr_sergio_viera_de_mello, av_de_la_revolucion).
 
 conecta_con(calle_san_jeronimo_emiliani, calle_antigua_ferrocarril).
 conecta_con(calle_antigua_ferrocarril, calle_san_jeronimo_emiliani).
 
-conecta_con(calle_san_jeronimo_emiliani, calle_del_mediterraneo_2).
-conecta_con(calle_del_mediterraneo_2, calle_san_jeronimo_emiliani).
+conecta_con(calle_del_mediterraneo_2, blvr_la_sultana_1).
+conecta_con(blvr_la_sultana_1, calle_del_mediterraneo_2).
 
 conecta_con(calle_del_mediterraneo_2, calle_antigua_ferrocarril).
 conecta_con(calle_antigua_ferrocarril, calle_del_mediterraneo_2).
 
-conecta_con(calle_del_mediterraneo_2, blvr_la_sultana_1).
-conecta_con(blvr_la_sultana_1, calle_del_mediterraneo_2).
-
 conecta_con(blvr_la_sultana_1, calle_antigua_ferrocarril).
 conecta_con(calle_antigua_ferrocarril, blvr_la_sultana_1).
 
-conecta_con(blvr_la_sultana_3, los_proceres_3).
-conecta_con(los_proceres_3, blvr_la_sultana_3).
-conecta_con(blvr_la_sultana_3, los_proceres_4).
-conecta_con(los_proceres_4, blvr_la_sultana_3).
+conecta_con(los_proceres_1, carretera_panamericana_3).
+conecta_con(carretera_panamericana_3, los_proceres_1).
 
-conecta_con(av_albert_einstein_3, los_proceres_7).
-conecta_con(los_proceres_7, av_albert_einstein_3).
+conecta_con(los_proceres_1, alameda_manuel_enrique_araujo_1).
+conecta_con(alameda_manuel_enrique_araujo_1, los_proceres_1).
 
-conecta_con(av_albert_einstein_1, c_n1_1).
-conecta_con(c_n1_1, av_albert_einstein_1).
+conecta_con(los_proceres_1, blvr_la_sultana_3).
+conecta_con(blvr_la_sultana_3,los_proceres_1).
 
-conecta_con(los_proceres_9, c_n1_4).
-conecta_con(c_n1_4, los_proceres_9).
+conecta_con(los_proceres_2, blvr_la_sultana_3).
+conecta_con(blvr_la_sultana_3,los_proceres_2).
+
+conecta_con(los_proceres_2,interseccion_proceres_albert_einstein).
+conecta_con(interseccion_proceres_albert_einstein,los_proceres_2).
+
+conecta_con(los_proceres_3, interseccion_proceres_albert_einstein).
+conecta_con(interseccion_proceres_albert_einstein,los_proceres_3).
+
+conecta_con(los_proceres_3, interseccion_proceres_c_n1_4).
+conecta_con(interseccion_proceres_c_n1_4,los_proceres_3).
+
+conecta_con(los_proceres_4, interseccion_proceres_c_n1_4).
+conecta_con(interseccion_proceres_c_n1_4,los_proceres_4).
+
+conecta_con(los_proceres_4, calle_antigua_a_huizucar_3).
+conecta_con(calle_antigua_a_huizucar_3,los_proceres_4).
+
 
 % SUBCALLES
 conecta_con(carretera_panamericana_1, carretera_panamericana_2).
@@ -295,8 +282,14 @@ conecta_con(alameda_manuel_enrique_araujo_1, alameda_manuel_enrique_araujo_2).
 conecta_con(alameda_manuel_enrique_araujo_2, alameda_manuel_enrique_araujo_1).
 conecta_con(alameda_manuel_enrique_araujo_2, alameda_manuel_enrique_araujo_3).
 conecta_con(alameda_manuel_enrique_araujo_3, alameda_manuel_enrique_araujo_2).
-conecta_con(alameda_manuel_enrique_araujo_3, alameda_manuel_enrique_araujo_4).
 conecta_con(alameda_manuel_enrique_araujo_4, alameda_manuel_enrique_araujo_3).
+conecta_con(alameda_manuel_enrique_araujo_3, alameda_manuel_enrique_araujo_4).
+
+conecta_con(av_de_la_revolucion, alameda_manuel_enrique_araujo_4).
+conecta_con(alameda_manuel_enrique_araujo_4, av_de_la_revolucion).
+
+conecta_con(av_de_la_revolucion, alameda_manuel_enrique_araujo_3).
+conecta_con(alameda_manuel_enrique_araujo_3, av_de_la_revolucion).
 
 conecta_con(calle_del_mediterraneo_1, calle_del_mediterraneo_2).
 conecta_con(calle_del_mediterraneo_2, calle_del_mediterraneo_1).
@@ -322,8 +315,6 @@ conecta_con(calle_antigua_a_huizucar_1, calle_antigua_a_huizucar_2).
 conecta_con(calle_antigua_a_huizucar_2, calle_antigua_a_huizucar_1).
 conecta_con(calle_antigua_a_huizucar_2, calle_antigua_a_huizucar_3).
 conecta_con(calle_antigua_a_huizucar_3, calle_antigua_a_huizucar_2).
-conecta_con(calle_antigua_a_huizucar_3, calle_antigua_a_huizucar_4).
-conecta_con(calle_antigua_a_huizucar_4, calle_antigua_a_huizucar_3).
 
 conecta_con(av_las_mercedes_1, av_las_mercedes_2).
 conecta_con(av_las_mercedes_2, av_las_mercedes_1).
@@ -337,18 +328,6 @@ conecta_con(los_proceres_2, los_proceres_3).
 conecta_con(los_proceres_3, los_proceres_2).
 conecta_con(los_proceres_3, los_proceres_4).
 conecta_con(los_proceres_4, los_proceres_3).
-conecta_con(los_proceres_4, los_proceres_5).
-conecta_con(los_proceres_5, los_proceres_4).
-conecta_con(los_proceres_5, los_proceres_6).
-conecta_con(los_proceres_6, los_proceres_5).
-conecta_con(los_proceres_6, los_proceres_7).
-conecta_con(los_proceres_7, los_proceres_6).
-conecta_con(los_proceres_7, los_proceres_8).
-conecta_con(los_proceres_8, los_proceres_7).
-conecta_con(los_proceres_8, los_proceres_9).
-conecta_con(los_proceres_9, los_proceres_8).
-conecta_con(los_proceres_9, los_proceres_10).
-conecta_con(los_proceres_10, los_proceres_9).
 
 
 % Validar lugar X
