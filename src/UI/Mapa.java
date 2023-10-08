@@ -85,6 +85,7 @@ public class Mapa extends javax.swing.JFrame {
         lugarImagenes.put("los_proceres_2",proceres2Img );
         lugarImagenes.put("los_proceres_3",proceres3Img );
         lugarImagenes.put("los_proceres_4",proceres4Img );
+        lugarImagenes.put("los_proceres_5",proceres5Img );
         lugarImagenes.put("calle_jorge_dominguez",calleJorgeDominguezImg );
         lugarImagenes.put("colonia_general_arce",coloniaGeneralArceImg );
         lugarImagenes.put("av_albert_einstein_1",avAlbertEinstein1Img );
@@ -189,6 +190,7 @@ public class Mapa extends javax.swing.JFrame {
         calleHuizucar1Img = new javax.swing.JLabel();
         calleHuizucar2Img = new javax.swing.JLabel();
         calleHuizucar3Img = new javax.swing.JLabel();
+        proceres5Img = new javax.swing.JLabel();
         proceres4Img = new javax.swing.JLabel();
         proceres3Img = new javax.swing.JLabel();
         proceres2Img = new javax.swing.JLabel();
@@ -627,6 +629,7 @@ public class Mapa extends javax.swing.JFrame {
         });
         getContentPane().add(ucaToggle);
         ucaToggle.setBounds(830, 460, 59, 60);
+
         carreteraPanamericana1Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/carreteraPanamericana1.png"))); // NOI18N
         carreteraPanamericana1Img.setToolTipText("Carretera panamericana");
         getContentPane().add(carreteraPanamericana1Img);
@@ -761,6 +764,10 @@ public class Mapa extends javax.swing.JFrame {
         calleHuizucar3Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/calle_huizucar3.png"))); // NOI18N
         getContentPane().add(calleHuizucar3Img);
         calleHuizucar3Img.setBounds(1240, 370, 30, 69);
+
+        proceres5Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/los_proceres5.png"))); // NOI18N
+        getContentPane().add(proceres5Img);
+        proceres5Img.setBounds(680, 359, 50, 20);
 
         proceres4Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/los_proceres4.png"))); // NOI18N
         getContentPane().add(proceres4Img);
@@ -1117,11 +1124,10 @@ public class Mapa extends javax.swing.JFrame {
     private javax.swing.JLabel cn1_3Img;
     private javax.swing.JLabel cn1_4Img;
     private javax.swing.JLabel colegioHighlandsImg;
+    private javax.swing.JLabel coloniaGeneralArceImg;
     private javax.swing.JToggleButton coopefaToggle;
     private javax.swing.JToggleButton cuscaToggle;
     private javax.swing.JToggleButton emilianiToggle;
-    private javax.swing.JLabel enriqueAraujo3Img;
-    private javax.swing.JLabel coloniaGeneralArceImg;
     private javax.swing.JLabel escuelaAlemanaImg;
     private javax.swing.JLabel escuelaMilitarImg;
     private javax.swing.JLabel estadioCuscatlanImg;
@@ -1144,11 +1150,11 @@ public class Mapa extends javax.swing.JFrame {
     private javax.swing.JLabel laSultana2Img;
     private javax.swing.JLabel laSultana3Img;
     private javax.swing.JLabel lasCascadasImg;
-    private javax.swing.JToggleButton militarToggle;
     private javax.swing.JLabel manuelEnriqueAraujo1Img;
     private javax.swing.JLabel manuelEnriqueAraujo2Img;
     private javax.swing.JLabel manuelEnriqueAraujo3Img;
     private javax.swing.JLabel manuelEnriqueAraujo4Img;
+    private javax.swing.JToggleButton militarToggle;
     private javax.swing.JLabel multiplazaImg;
     private javax.swing.JToggleButton multiplazaToggle;
     private javax.swing.JToggleButton pLomasToggle;
@@ -1159,6 +1165,7 @@ public class Mapa extends javax.swing.JFrame {
     private javax.swing.JLabel proceres2Img;
     private javax.swing.JLabel proceres3Img;
     private javax.swing.JLabel proceres4Img;
+    private javax.swing.JLabel proceres5Img;
     private java.awt.List rutaList;
     private javax.swing.JToggleButton sanFranciscoToggle;
     private javax.swing.JLabel texacoCoopefaImg;
