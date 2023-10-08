@@ -356,7 +356,7 @@ public class Mapa extends javax.swing.JFrame {
         parqueDePelotasImg.setBounds(950, 170, 30, 40);
 
         carreteraPanamericana1Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/carreteraPanamericana1.png"))); // NOI18N
-        carreteraPanamericana1Img.setToolTipText("Carretera panamericana");
+        carreteraPanamericana1Img.setToolTipText("Carretera Panamericana");
         getContentPane().add(carreteraPanamericana1Img);
         carreteraPanamericana1Img.setBounds(390, 530, 110, 60);
 
@@ -381,74 +381,92 @@ public class Mapa extends javax.swing.JFrame {
         avLasMercedes1Img.setBounds(980, 180, 70, 80);
 
         avIndependencia1Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/av_independecia_1.png"))); // NOI18N
+        avIndependencia1Img.setToolTipText("Avenida Independencia");
         getContentPane().add(avIndependencia1Img);
         avIndependencia1Img.setBounds(930, 240, 120, 60);
 
         avIndependencia2Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/av_independecia_2.png"))); // NOI18N
+        avIndependencia2Img.setToolTipText("Avenida Independencia");
         getContentPane().add(avIndependencia2Img);
         avIndependencia2Img.setBounds(900, 270, 40, 90);
 
         calleJorgeDominguezImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/calle_jorge_dominguez.png"))); // NOI18N
+        calleJorgeDominguezImg.setToolTipText("Calle Jorge Dominguez");
         getContentPane().add(calleJorgeDominguezImg);
         calleJorgeDominguezImg.setBounds(900, 340, 19, 16);
 
         calleDouglasVarelaImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/calle_capitan_douglas_varela.png"))); // NOI18N
+        calleDouglasVarelaImg.setToolTipText("Calle Douglas Varela");
         getContentPane().add(calleDouglasVarelaImg);
         calleDouglasVarelaImg.setBounds(1000, 320, 60, 27);
 
         coloniaGeneralArceImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/colonia_general_arce.png"))); // NOI18N
+        coloniaGeneralArceImg.setToolTipText("Colonia General Arce");
         getContentPane().add(coloniaGeneralArceImg);
         coloniaGeneralArceImg.setBounds(1010, 340, 10, 20);
 
         ucaCalleImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/ucaCalle.png"))); // NOI18N
+        ucaCalleImg.setToolTipText("Calle UCA");
         getContentPane().add(ucaCalleImg);
         ucaCalleImg.setBounds(810, 430, 50, 30);
 
         laSultana1Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/blvr la sultana 1.png"))); // NOI18N
+        laSultana1Img.setToolTipText("La Sultana");
         getContentPane().add(laSultana1Img);
         laSultana1Img.setBounds(720, 430, 100, 80);
 
         laSultana2Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/blvr la sultana 2.png"))); // NOI18N
+        laSultana2Img.setToolTipText("La Sultana");
         getContentPane().add(laSultana2Img);
         laSultana2Img.setBounds(810, 410, 20, 30);
 
         laSultana3Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/blvr la sultana 3.png"))); // NOI18N
+        laSultana3Img.setToolTipText("La Sultana");
         getContentPane().add(laSultana3Img);
         laSultana3Img.setBounds(820, 380, 15, 34);
 
         calleSanJeronmoEmilianiImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/calle_san_jeronimo_emiliani.png"))); // NOI18N
+        calleSanJeronmoEmilianiImg.setToolTipText("Calle San Jeronimo Emiliani");
         getContentPane().add(calleSanJeronmoEmilianiImg);
         calleSanJeronmoEmilianiImg.setBounds(640, 480, 30, 60);
 
         calleAntiguaFerrocarril.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/calle_antigua_ferrocarril.png"))); // NOI18N
+        calleAntiguaFerrocarril.setToolTipText("Calle Antigua Ferrocarril");
         getContentPane().add(calleAntiguaFerrocarril);
         calleAntiguaFerrocarril.setBounds(640, 500, 88, 43);
 
         calleMediterraneo2Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/mediterraneo_2.png"))); // NOI18N
+        calleMediterraneo2Img.setToolTipText("Calle Mediterraneo");
         getContentPane().add(calleMediterraneo2Img);
         calleMediterraneo2Img.setBounds(725, 490, 70, 50);
 
         calleMediterraneo1Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/mediterraneo_1.png"))); // NOI18N
+        calleMediterraneo1Img.setToolTipText("Calle Mediterraneo");
         getContentPane().add(calleMediterraneo1Img);
         calleMediterraneo1Img.setBounds(780, 520, 100, 50);
 
         avAlbertEinstein2Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/albert_einstein_2.png"))); // NOI18N
+        avAlbertEinstein2Img.setToolTipText("Avenida Albert Einstein");
         getContentPane().add(avAlbertEinstein2Img);
         avAlbertEinstein2Img.setBounds(890, 471, 20, 30);
 
         avAlbertEinstein3Img1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/albert_einstein_3.png"))); // NOI18N
+        avAlbertEinstein3Img1.setToolTipText("Avenida Albert Einstein");
         getContentPane().add(avAlbertEinstein3Img1);
         avAlbertEinstein3Img1.setBounds(900, 390, 78, 90);
 
         avAlbertEinstein1Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/albert_einstein_1.png"))); // NOI18N
+        avAlbertEinstein1Img.setToolTipText("Avenida Albert Einstein");
         getContentPane().add(avAlbertEinstein1Img);
         avAlbertEinstein1Img.setBounds(870, 490, 30, 70);
 
         manuelEnriqueAraujo3Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/alamedaEnriqueAraujo3.png"))); // NOI18N
+        manuelEnriqueAraujo3Img.setToolTipText("Alameda Manuel Enrique Araujo");
         getContentPane().add(manuelEnriqueAraujo3Img);
         manuelEnriqueAraujo3Img.setBounds(800, 280, 30, 40);
 
         manuelEnriqueAraujo2Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/alamedaEnriqueAraujo2.png"))); // NOI18N
+        manuelEnriqueAraujo2Img.setToolTipText("Alameda Manuel Enrique Araujo");
         getContentPane().add(manuelEnriqueAraujo2Img);
         manuelEnriqueAraujo2Img.setBounds(790, 291, 20, 40);
 
@@ -463,46 +481,57 @@ public class Mapa extends javax.swing.JFrame {
         manuelEnriqueAraujo4Img.setBounds(830, 170, 170, 130);
 
         cn1_3Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/cn1_3.png"))); // NOI18N
+        cn1_3Img.setToolTipText("C. N1");
         getContentPane().add(cn1_3Img);
         cn1_3Img.setBounds(950, 430, 170, 120);
 
         cn1_4Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/cn1_4.png"))); // NOI18N
+        cn1_4Img.setToolTipText("C. N1");
         getContentPane().add(cn1_4Img);
         cn1_4Img.setBounds(1090, 390, 60, 100);
 
         cn1_2Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/cn1_2.png"))); // NOI18N
+        cn1_2Img.setToolTipText("C. N1");
         getContentPane().add(cn1_2Img);
         cn1_2Img.setBounds(910, 500, 40, 70);
 
         cn1_1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/cn1_1.png"))); // NOI18N
+        cn1_1.setToolTipText("C. N1");
         getContentPane().add(cn1_1);
         cn1_1.setBounds(880, 554, 40, 20);
 
         calleHuizucar1Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/calle_huizucar1.png"))); // NOI18N
+        calleHuizucar1Img.setToolTipText("Calle Huizucar");
         getContentPane().add(calleHuizucar1Img);
         calleHuizucar1Img.setBounds(1140, 540, 40, 80);
 
         calleHuizucar2Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/calle_huizucar2.png"))); // NOI18N
+        calleHuizucar2Img.setToolTipText("Calle Huizucar");
         getContentPane().add(calleHuizucar2Img);
         calleHuizucar2Img.setBounds(1165, 440, 90, 120);
 
         calleHuizucar3Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/calle_huizucar3.png"))); // NOI18N
+        calleHuizucar3Img.setToolTipText("Calle Huizucar");
         getContentPane().add(calleHuizucar3Img);
         calleHuizucar3Img.setBounds(1240, 370, 30, 69);
 
         proceres5Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/los_proceres5.png"))); // NOI18N
+        proceres5Img.setToolTipText("Los Proceres");
         getContentPane().add(proceres5Img);
         proceres5Img.setBounds(680, 359, 50, 20);
 
         proceres4Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/los_proceres4.png"))); // NOI18N
+        proceres4Img.setToolTipText("Los Proceres");
         getContentPane().add(proceres4Img);
         proceres4Img.setBounds(1132, 360, 130, 41);
 
         proceres3Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/los_proceres3.png"))); // NOI18N
+        proceres3Img.setToolTipText("Los Proceres");
         getContentPane().add(proceres3Img);
         proceres3Img.setBounds(970, 380, 170, 30);
 
         proceres2Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/los_proceres2.png"))); // NOI18N
+        proceres2Img.setToolTipText("Los Proceres");
         getContentPane().add(proceres2Img);
         proceres2Img.setBounds(830, 380, 140, 20);
 
@@ -801,7 +830,7 @@ public class Mapa extends javax.swing.JFrame {
         jPanel1.setLayout(null);
 
         textBoxP2.setBackground(new java.awt.Color(76, 132, 255));
-        textBoxP2.setForeground(new java.awt.Color(145, 195, 255));
+        textBoxP2.setForeground(new java.awt.Color(153, 255, 255));
         textBoxP2.setText("punto de destino");
         textBoxP2.setBorder(null);
         jPanel1.add(textBoxP2);
@@ -847,7 +876,7 @@ public class Mapa extends javax.swing.JFrame {
         jLabel2.setBounds(40, 270, 120, 30);
 
         textBoxP1.setBackground(new java.awt.Color(76, 132, 255));
-        textBoxP1.setForeground(new java.awt.Color(145, 195, 255));
+        textBoxP1.setForeground(new java.awt.Color(153, 255, 255));
         textBoxP1.setText("punto de partida");
         textBoxP1.setToolTipText("");
         textBoxP1.setBorder(null);
@@ -862,8 +891,7 @@ public class Mapa extends javax.swing.JFrame {
         jPanel1.add(jSeparator2);
         jSeparator2.setBounds(70, 70, 240, 20);
 
-        rutaList.setBackground(new java.awt.Color(76, 132, 255));
-        rutaList.setEnabled(false);
+        rutaList.setBackground(new java.awt.Color(76, 93, 249));
         rutaList.setForeground(new java.awt.Color(255, 255, 255));
         rutaList.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
