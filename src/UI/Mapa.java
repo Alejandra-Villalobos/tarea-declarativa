@@ -48,7 +48,7 @@ public class Mapa extends javax.swing.JFrame {
         lugarImagenes.put("bally_sports_center", ballySportsImg);
         lugarImagenes.put("texaco_coopefa", texacoCoopefaImg);
         lugarImagenes.put("veterinaria_santa_fe", veterinariaSantaFeImg);
-        lugarImagenes.put("dollar_city", parqueDePelotasImg);
+        lugarImagenes.put("parque_de_pelotas", parqueDePelotasImg);
         lugarImagenes.put("parque_lomas_san_francisco", parqueLomasDeSanFranciscoimg);
         lugarImagenes.put("veterinaria_san_francisco", veterinariaSanFranciscoImg);
         lugarImagenes.put("centro_comercial_las_acacias", cc_acaciasImg);
@@ -195,6 +195,31 @@ public class Mapa extends javax.swing.JFrame {
         emilianiToggle = new javax.swing.JToggleButton();
         highlandsToggle = new javax.swing.JToggleButton();
         ucaToggle = new javax.swing.JToggleButton();
+        capitaljLabel = new javax.swing.JLabel();
+        hospitalESjLabel = new javax.swing.JLabel();
+        vetFranciscojLabel = new javax.swing.JLabel();
+        texacoLomajLabel = new javax.swing.JLabel();
+        unoLomasjLabel = new javax.swing.JLabel();
+        unoSultanajLabel = new javax.swing.JLabel();
+        texacoCoopefajLabel = new javax.swing.JLabel();
+        cuscajLabel = new javax.swing.JLabel();
+        pelotasjLabel = new javax.swing.JLabel();
+        gambetajLabel = new javax.swing.JLabel();
+        pLomasjLabel = new javax.swing.JLabel();
+        ballyjLabel = new javax.swing.JLabel();
+        coopefajLabel = new javax.swing.JLabel();
+        militarjLabel = new javax.swing.JLabel();
+        vestidosjLabel = new javax.swing.JLabel();
+        feriajLabel = new javax.swing.JLabel();
+        bambujLabel = new javax.swing.JLabel();
+        acaciasjLabel = new javax.swing.JLabel();
+        cascadasjLabel = new javax.swing.JLabel();
+        multiplazajLabel = new javax.swing.JLabel();
+        alemanajLabel = new javax.swing.JLabel();
+        waltejLabel = new javax.swing.JLabel();
+        emilianijLabel = new javax.swing.JLabel();
+        highlandsLabel = new javax.swing.JLabel();
+        ucaLabel = new javax.swing.JLabel();
         imagenMapa = new javax.swing.JLabel();
         veterinariaSantaFeImg = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
@@ -226,7 +251,7 @@ public class Mapa extends javax.swing.JFrame {
         hospitalImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/localizacion.png"))); // NOI18N
         hospitalImg.setToolTipText("Hospital de El Salvador");
         getContentPane().add(hospitalImg);
-        hospitalImg.setBounds(820, 220, 27, 50);
+        hospitalImg.setBounds(820, 240, 27, 50);
 
         ucaImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/localizacion.png"))); // NOI18N
         ucaImg.setToolTipText("uca");
@@ -258,7 +283,7 @@ public class Mapa extends javax.swing.JFrame {
         escuelaAlemanaImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/localizacion.png"))); // NOI18N
         escuelaAlemanaImg.setToolTipText("Academia Alamena");
         getContentPane().add(escuelaAlemanaImg);
-        escuelaAlemanaImg.setBounds(780, 450, 30, 40);
+        escuelaAlemanaImg.setBounds(800, 440, 30, 40);
 
         texacoCoopefaImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/localizacion.png"))); // NOI18N
         texacoCoopefaImg.setToolTipText("Texaco Coopefa");
@@ -268,7 +293,7 @@ public class Mapa extends javax.swing.JFrame {
         escuelaMilitarImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/localizacion.png"))); // NOI18N
         escuelaMilitarImg.setToolTipText("Escuela Militar Gerardo Barrios");
         getContentPane().add(escuelaMilitarImg);
-        escuelaMilitarImg.setBounds(910, 230, 30, 40);
+        escuelaMilitarImg.setBounds(910, 240, 30, 40);
 
         casaDeLoVestidosImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/localizacion.png"))); // NOI18N
         casaDeLoVestidosImg.setToolTipText("La casa de los vestidos");
@@ -298,7 +323,7 @@ public class Mapa extends javax.swing.JFrame {
         canchaCoopefaImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/localizacion.png"))); // NOI18N
         canchaCoopefaImg.setToolTipText("Cancha Coopefa");
         getContentPane().add(canchaCoopefaImg);
-        canchaCoopefaImg.setBounds(990, 300, 30, 40);
+        canchaCoopefaImg.setBounds(1000, 280, 30, 40);
 
         multiplazaImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/localizacion.png"))); // NOI18N
         multiplazaImg.setToolTipText("Multiplaza");
@@ -348,12 +373,12 @@ public class Mapa extends javax.swing.JFrame {
         cc_acaciasImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/localizacion.png"))); // NOI18N
         cc_acaciasImg.setToolTipText("Centro comercial Las Acacias");
         getContentPane().add(cc_acaciasImg);
-        cc_acaciasImg.setBounds(1120, 570, 30, 40);
+        cc_acaciasImg.setBounds(1120, 560, 30, 40);
 
         parqueDePelotasImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/localizacion.png"))); // NOI18N
         parqueDePelotasImg.setToolTipText("Parque de pelotas");
         getContentPane().add(parqueDePelotasImg);
-        parqueDePelotasImg.setBounds(950, 170, 30, 40);
+        parqueDePelotasImg.setBounds(960, 170, 30, 40);
 
         carreteraPanamericana1Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/carreteraPanamericana1.png"))); // NOI18N
         carreteraPanamericana1Img.setToolTipText("Carretera Panamericana");
@@ -536,10 +561,11 @@ public class Mapa extends javax.swing.JFrame {
         proceres2Img.setBounds(830, 380, 140, 20);
 
         proceres1Img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/imagenesCalles/los_proceres1.png"))); // NOI18N
+        proceres1Img.setToolTipText("Los Proceres");
         getContentPane().add(proceres1Img);
         proceres1Img.setBounds(730, 370, 100, 20);
 
-        walteToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/walte_icon.png"))); // NOI18N
+        walteToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/school-icon.png"))); // NOI18N
         walteToggle.setAlignmentY(0.0F);
         walteToggle.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         walteToggle.addActionListener(new java.awt.event.ActionListener() {
@@ -548,9 +574,9 @@ public class Mapa extends javax.swing.JFrame {
             }
         });
         getContentPane().add(walteToggle);
-        walteToggle.setBounds(660, 440, 60, 80);
+        walteToggle.setBounds(670, 440, 40, 30);
 
-        capitalToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/capital_icon.png"))); // NOI18N
+        capitalToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/hotel-icon.png"))); // NOI18N
         capitalToggle.setAlignmentY(0.0F);
         capitalToggle.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         capitalToggle.addActionListener(new java.awt.event.ActionListener() {
@@ -559,9 +585,9 @@ public class Mapa extends javax.swing.JFrame {
             }
         });
         getContentPane().add(capitalToggle);
-        capitalToggle.setBounds(840, 390, 60, 60);
+        capitalToggle.setBounds(750, 380, 40, 40);
 
-        texacoCoopefaToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/texacoCoopefa_icon.png"))); // NOI18N
+        texacoCoopefaToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/gas-icon.png"))); // NOI18N
         texacoCoopefaToggle.setAlignmentY(0.0F);
         texacoCoopefaToggle.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         texacoCoopefaToggle.addActionListener(new java.awt.event.ActionListener() {
@@ -570,9 +596,9 @@ public class Mapa extends javax.swing.JFrame {
             }
         });
         getContentPane().add(texacoCoopefaToggle);
-        texacoCoopefaToggle.setBounds(1072, 280, 50, 80);
+        texacoCoopefaToggle.setBounds(1040, 340, 30, 30);
 
-        cuscaToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/cusca_icon.png"))); // NOI18N
+        cuscaToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/park-icon.png"))); // NOI18N
         cuscaToggle.setAlignmentY(0.0F);
         cuscaToggle.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         cuscaToggle.addActionListener(new java.awt.event.ActionListener() {
@@ -581,9 +607,9 @@ public class Mapa extends javax.swing.JFrame {
             }
         });
         getContentPane().add(cuscaToggle);
-        cuscaToggle.setBounds(1250, 450, 80, 70);
+        cuscaToggle.setBounds(1260, 450, 40, 40);
 
-        gambetaToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/gambeta_icon.png"))); // NOI18N
+        gambetaToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/park-icon.png"))); // NOI18N
         gambetaToggle.setAlignmentY(0.0F);
         gambetaToggle.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         gambetaToggle.addActionListener(new java.awt.event.ActionListener() {
@@ -592,9 +618,9 @@ public class Mapa extends javax.swing.JFrame {
             }
         });
         getContentPane().add(gambetaToggle);
-        gambetaToggle.setBounds(1110, 440, 80, 70);
+        gambetaToggle.setBounds(1120, 440, 30, 30);
 
-        pLomasToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/parqueLomas_icon.png"))); // NOI18N
+        pLomasToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/park-icon.png"))); // NOI18N
         pLomasToggle.setAlignmentY(0.0F);
         pLomasToggle.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         pLomasToggle.addActionListener(new java.awt.event.ActionListener() {
@@ -603,9 +629,9 @@ public class Mapa extends javax.swing.JFrame {
             }
         });
         getContentPane().add(pLomasToggle);
-        pLomasToggle.setBounds(980, 470, 70, 70);
+        pLomasToggle.setBounds(977, 470, 40, 30);
 
-        coopefaToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/canchasCoopefa_icon.png"))); // NOI18N
+        coopefaToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/park-icon.png"))); // NOI18N
         coopefaToggle.setAlignmentY(0.0F);
         coopefaToggle.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         coopefaToggle.addActionListener(new java.awt.event.ActionListener() {
@@ -614,9 +640,9 @@ public class Mapa extends javax.swing.JFrame {
             }
         });
         getContentPane().add(coopefaToggle);
-        coopefaToggle.setBounds(980, 280, 60, 70);
+        coopefaToggle.setBounds(960, 280, 40, 30);
 
-        ballyToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/bally_icon.png"))); // NOI18N
+        ballyToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/park-icon.png"))); // NOI18N
         ballyToggle.setAlignmentY(0.0F);
         ballyToggle.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         ballyToggle.addActionListener(new java.awt.event.ActionListener() {
@@ -625,9 +651,9 @@ public class Mapa extends javax.swing.JFrame {
             }
         });
         getContentPane().add(ballyToggle);
-        ballyToggle.setBounds(950, 400, 40, 60);
+        ballyToggle.setBounds(900, 400, 30, 30);
 
-        pelotasToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/pelotas_icon.png"))); // NOI18N
+        pelotasToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/park-icon.png"))); // NOI18N
         pelotasToggle.setAlignmentY(0.0F);
         pelotasToggle.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         pelotasToggle.addActionListener(new java.awt.event.ActionListener() {
@@ -636,9 +662,9 @@ public class Mapa extends javax.swing.JFrame {
             }
         });
         getContentPane().add(pelotasToggle);
-        pelotasToggle.setBounds(910, 110, 70, 70);
+        pelotasToggle.setBounds(920, 130, 30, 40);
 
-        texacoToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/texaco_icon.png"))); // NOI18N
+        texacoToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/gas-icon.png"))); // NOI18N
         texacoToggle.setAlignmentY(0.0F);
         texacoToggle.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         texacoToggle.addActionListener(new java.awt.event.ActionListener() {
@@ -647,9 +673,9 @@ public class Mapa extends javax.swing.JFrame {
             }
         });
         getContentPane().add(texacoToggle);
-        texacoToggle.setBounds(1190, 520, 80, 80);
+        texacoToggle.setBounds(1190, 520, 40, 38);
 
-        unoSultanaToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/unoSultana_icon.png"))); // NOI18N
+        unoSultanaToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/gas-icon.png"))); // NOI18N
         unoSultanaToggle.setAlignmentY(0.0F);
         unoSultanaToggle.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         unoSultanaToggle.addActionListener(new java.awt.event.ActionListener() {
@@ -658,9 +684,9 @@ public class Mapa extends javax.swing.JFrame {
             }
         });
         getContentPane().add(unoSultanaToggle);
-        unoSultanaToggle.setBounds(710, 530, 60, 80);
+        unoSultanaToggle.setBounds(713, 520, 37, 30);
 
-        unoLomasToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/unoLomas_icon.png"))); // NOI18N
+        unoLomasToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/gas-icon.png"))); // NOI18N
         unoLomasToggle.setAlignmentY(0.0F);
         unoLomasToggle.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         unoLomasToggle.addActionListener(new java.awt.event.ActionListener() {
@@ -669,9 +695,9 @@ public class Mapa extends javax.swing.JFrame {
             }
         });
         getContentPane().add(unoLomasToggle);
-        unoLomasToggle.setBounds(820, 560, 60, 80);
+        unoLomasToggle.setBounds(850, 560, 30, 30);
 
-        hospitalESToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/hospitalES_icon.png"))); // NOI18N
+        hospitalESToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/hospital-icon.png"))); // NOI18N
         hospitalESToggle.setAlignmentY(0.0F);
         hospitalESToggle.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         hospitalESToggle.addActionListener(new java.awt.event.ActionListener() {
@@ -680,9 +706,9 @@ public class Mapa extends javax.swing.JFrame {
             }
         });
         getContentPane().add(hospitalESToggle);
-        hospitalESToggle.setBounds(800, 160, 66, 80);
+        hospitalESToggle.setBounds(830, 200, 40, 30);
 
-        sanFranciscoToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/sanFrancisco_icon.png"))); // NOI18N
+        sanFranciscoToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/hospital-icon.png"))); // NOI18N
         sanFranciscoToggle.setAlignmentY(0.0F);
         sanFranciscoToggle.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         sanFranciscoToggle.addActionListener(new java.awt.event.ActionListener() {
@@ -691,9 +717,9 @@ public class Mapa extends javax.swing.JFrame {
             }
         });
         getContentPane().add(sanFranciscoToggle);
-        sanFranciscoToggle.setBounds(920, 520, 70, 80);
+        sanFranciscoToggle.setBounds(920, 550, 40, 30);
 
-        acaciasToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/acacias_icon.png"))); // NOI18N
+        acaciasToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/mall-icon.png"))); // NOI18N
         acaciasToggle.setAlignmentY(0.0F);
         acaciasToggle.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         acaciasToggle.addActionListener(new java.awt.event.ActionListener() {
@@ -702,9 +728,9 @@ public class Mapa extends javax.swing.JFrame {
             }
         });
         getContentPane().add(acaciasToggle);
-        acaciasToggle.setBounds(1060, 560, 70, 80);
+        acaciasToggle.setBounds(1080, 570, 30, 30);
 
-        feriaRosaToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/feria_rosa_icon.png"))); // NOI18N
+        feriaRosaToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/mall-icon.png"))); // NOI18N
         feriaRosaToggle.setAlignmentY(0.0F);
         feriaRosaToggle.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         feriaRosaToggle.addActionListener(new java.awt.event.ActionListener() {
@@ -713,9 +739,9 @@ public class Mapa extends javax.swing.JFrame {
             }
         });
         getContentPane().add(feriaRosaToggle);
-        feriaRosaToggle.setBounds(800, 300, 60, 80);
+        feriaRosaToggle.setBounds(820, 310, 30, 30);
 
-        vestidosToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/vestidos_icon.png"))); // NOI18N
+        vestidosToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/mall-icon.png"))); // NOI18N
         vestidosToggle.setAlignmentY(0.0F);
         vestidosToggle.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         vestidosToggle.addActionListener(new java.awt.event.ActionListener() {
@@ -724,9 +750,9 @@ public class Mapa extends javax.swing.JFrame {
             }
         });
         getContentPane().add(vestidosToggle);
-        vestidosToggle.setBounds(920, 300, 60, 80);
+        vestidosToggle.setBounds(920, 320, 30, 30);
 
-        cascadasToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/cascadas_icon.png"))); // NOI18N
+        cascadasToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/mall-icon.png"))); // NOI18N
         cascadasToggle.setAlignmentY(0.0F);
         cascadasToggle.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         cascadasToggle.addActionListener(new java.awt.event.ActionListener() {
@@ -735,9 +761,9 @@ public class Mapa extends javax.swing.JFrame {
             }
         });
         getContentPane().add(cascadasToggle);
-        cascadasToggle.setBounds(362, 460, 60, 80);
+        cascadasToggle.setBounds(380, 480, 30, 30);
 
-        multiplazaToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/multiplaza_icon.png"))); // NOI18N
+        multiplazaToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/mall-icon.png"))); // NOI18N
         multiplazaToggle.setAlignmentY(0.0F);
         multiplazaToggle.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         multiplazaToggle.addActionListener(new java.awt.event.ActionListener() {
@@ -746,9 +772,9 @@ public class Mapa extends javax.swing.JFrame {
             }
         });
         getContentPane().add(multiplazaToggle);
-        multiplazaToggle.setBounds(450, 410, 70, 80);
+        multiplazaToggle.setBounds(470, 430, 30, 30);
 
-        alemanaToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/alemana_icon.png"))); // NOI18N
+        alemanaToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/school-icon.png"))); // NOI18N
         alemanaToggle.setAlignmentY(0.0F);
         alemanaToggle.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         alemanaToggle.addActionListener(new java.awt.event.ActionListener() {
@@ -757,9 +783,9 @@ public class Mapa extends javax.swing.JFrame {
             }
         });
         getContentPane().add(alemanaToggle);
-        alemanaToggle.setBounds(766, 450, 60, 70);
+        alemanaToggle.setBounds(776, 460, 40, 30);
 
-        bambuToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/bambu_icon.png"))); // NOI18N
+        bambuToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/mall-icon.png"))); // NOI18N
         bambuToggle.setAlignmentY(0.0F);
         bambuToggle.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         bambuToggle.addActionListener(new java.awt.event.ActionListener() {
@@ -768,9 +794,9 @@ public class Mapa extends javax.swing.JFrame {
             }
         });
         getContentPane().add(bambuToggle);
-        bambuToggle.setBounds(752, 60, 60, 80);
+        bambuToggle.setBounds(850, 60, 40, 30);
 
-        militarToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/militar_icon.png"))); // NOI18N
+        militarToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/school-icon.png"))); // NOI18N
         militarToggle.setAlignmentY(0.0F);
         militarToggle.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         militarToggle.addActionListener(new java.awt.event.ActionListener() {
@@ -779,9 +805,9 @@ public class Mapa extends javax.swing.JFrame {
             }
         });
         getContentPane().add(militarToggle);
-        militarToggle.setBounds(910, 220, 50, 70);
+        militarToggle.setBounds(960, 220, 30, 30);
 
-        emilianiToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/emiliani_icon.png"))); // NOI18N
+        emilianiToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/school-icon.png"))); // NOI18N
         emilianiToggle.setAlignmentY(0.0F);
         emilianiToggle.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         emilianiToggle.addActionListener(new java.awt.event.ActionListener() {
@@ -790,9 +816,9 @@ public class Mapa extends javax.swing.JFrame {
             }
         });
         getContentPane().add(emilianiToggle);
-        emilianiToggle.setBounds(610, 350, 60, 70);
+        emilianiToggle.setBounds(610, 350, 40, 40);
 
-        highlandsToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/highlands_icon.png"))); // NOI18N
+        highlandsToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/school-icon.png"))); // NOI18N
         highlandsToggle.setAlignmentY(0.0F);
         highlandsToggle.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         highlandsToggle.addActionListener(new java.awt.event.ActionListener() {
@@ -801,9 +827,9 @@ public class Mapa extends javax.swing.JFrame {
             }
         });
         getContentPane().add(highlandsToggle);
-        highlandsToggle.setBounds(620, 270, 66, 70);
+        highlandsToggle.setBounds(630, 280, 40, 30);
 
-        ucaToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/uca_icon.png"))); // NOI18N
+        ucaToggle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/iconos/school-icon.png"))); // NOI18N
         ucaToggle.setAlignmentY(0.0F);
         ucaToggle.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         ucaToggle.addActionListener(new java.awt.event.ActionListener() {
@@ -812,7 +838,133 @@ public class Mapa extends javax.swing.JFrame {
             }
         });
         getContentPane().add(ucaToggle);
-        ucaToggle.setBounds(830, 460, 59, 60);
+        ucaToggle.setBounds(840, 480, 40, 30);
+
+        capitaljLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        capitaljLabel.setText("Hotel Capital");
+        getContentPane().add(capitaljLabel);
+        capitaljLabel.setBounds(727, 420, 90, 16);
+
+        hospitalESjLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        hospitalESjLabel.setText("Hospital El Salvador");
+        getContentPane().add(hospitalESjLabel);
+        hospitalESjLabel.setBounds(787, 230, 130, 20);
+
+        vetFranciscojLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        vetFranciscojLabel.setText("<html><center><body>Veterinaria<br>San Francisco</body></center></html>");
+        getContentPane().add(vetFranciscojLabel);
+        vetFranciscojLabel.setBounds(890, 580, 100, 30);
+
+        texacoLomajLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        texacoLomajLabel.setText("<html><center><body>Texaco<br>Loma Linda</body></center></html>");
+        getContentPane().add(texacoLomajLabel);
+        texacoLomajLabel.setBounds(1160, 560, 100, 30);
+
+        unoLomasjLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        unoLomasjLabel.setText("<html><center><body>UNO Las<br>Lomas</body></center></html>");
+        getContentPane().add(unoLomasjLabel);
+        unoLomasjLabel.setBounds(830, 590, 70, 40);
+
+        unoSultanajLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        unoSultanajLabel.setText("<html><center><body>UNO La<br>Sultana</body></center></html>");
+        getContentPane().add(unoSultanajLabel);
+        unoSultanajLabel.setBounds(697, 550, 70, 40);
+
+        texacoCoopefajLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        texacoCoopefajLabel.setText("Texaco Coopefa");
+        getContentPane().add(texacoCoopefajLabel);
+        texacoCoopefajLabel.setBounds(1000, 370, 110, 16);
+
+        cuscajLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cuscajLabel.setText("<html><center><body>Estadio<br>Cuscatlán</body></center></html>");
+        getContentPane().add(cuscajLabel);
+        cuscajLabel.setBounds(1237, 490, 80, 30);
+
+        pelotasjLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        pelotasjLabel.setText("<html><center><body>Parque de<br>Pelotas</body></center></html>");
+        getContentPane().add(pelotasjLabel);
+        pelotasjLabel.setBounds(890, 170, 90, 30);
+
+        gambetajLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        gambetajLabel.setText("<html><center><body>Gambeta<br>Los Próceres</body></center></html>");
+        getContentPane().add(gambetajLabel);
+        gambetajLabel.setBounds(1097, 470, 80, 40);
+
+        pLomasjLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        pLomasjLabel.setText("<html><center><body>Parque Lomas<br>San Francisco</body></center></html>");
+        getContentPane().add(pLomasjLabel);
+        pLomasjLabel.setBounds(950, 500, 90, 40);
+
+        ballyjLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ballyjLabel.setText("Bally Sports");
+        getContentPane().add(ballyjLabel);
+        ballyjLabel.setBounds(881, 430, 70, 20);
+
+        coopefajLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        coopefajLabel.setText("<html><center><body>Cancha<br>Coopefa</body></center></html>");
+        getContentPane().add(coopefajLabel);
+        coopefajLabel.setBounds(947, 310, 70, 40);
+
+        militarjLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        militarjLabel.setText("Escuela Militar");
+        getContentPane().add(militarjLabel);
+        militarjLabel.setBounds(930, 250, 90, 20);
+
+        vestidosjLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        vestidosjLabel.setText("<html><center><body>Casa de<br>los vestidos</body></center></html>");
+        getContentPane().add(vestidosjLabel);
+        vestidosjLabel.setBounds(890, 346, 90, 40);
+
+        feriajLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        feriajLabel.setText("<html><center><body>Centro Comercial<br>Feria Rosa</body></center></html>");
+        getContentPane().add(feriajLabel);
+        feriajLabel.setBounds(780, 340, 110, 30);
+
+        bambujLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bambujLabel.setText("<html><center><body>Centro Comercial<br>Bambú</body></center></html>");
+        getContentPane().add(bambujLabel);
+        bambujLabel.setBounds(820, 90, 100, 40);
+
+        acaciasjLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        acaciasjLabel.setText("<html><center><body>Centro Comercial<br>Las Acacias</body></center></html>");
+        getContentPane().add(acaciasjLabel);
+        acaciasjLabel.setBounds(1040, 600, 110, 30);
+
+        cascadasjLabel.setText("Las Cascadas");
+        getContentPane().add(cascadasjLabel);
+        cascadasjLabel.setBounds(360, 510, 69, 16);
+
+        multiplazajLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        multiplazajLabel.setText("Multiplaza");
+        getContentPane().add(multiplazajLabel);
+        multiplazajLabel.setBounds(450, 460, 70, 16);
+
+        alemanajLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        alemanajLabel.setText("<html><center><body>Escuela<br>Alemana</body></center></html>");
+        getContentPane().add(alemanajLabel);
+        alemanajLabel.setBounds(760, 490, 70, 40);
+
+        waltejLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        waltejLabel.setText("<html><center><body>Colegio<br>Augusto<br>Walte</body></center></html>");
+        getContentPane().add(waltejLabel);
+        waltejLabel.setBounds(650, 470, 80, 50);
+
+        emilianijLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        emilianijLabel.setText("<html><center><body>Instituto<br>Técnico<br>Emiliani</body></center></html>");
+        emilianijLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(emilianijLabel);
+        emilianijLabel.setBounds(590, 390, 80, 50);
+
+        highlandsLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        highlandsLabel.setText("<html><center><body>Colegio<br>Highlands</body></center></html>");
+        highlandsLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(highlandsLabel);
+        highlandsLabel.setBounds(610, 310, 80, 30);
+
+        ucaLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ucaLabel.setText("UCA");
+        getContentPane().add(ucaLabel);
+        ucaLabel.setBounds(840, 510, 40, 16);
 
         imagenMapa.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         imagenMapa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/mapa.png"))); // NOI18N
@@ -1118,7 +1270,9 @@ public class Mapa extends javax.swing.JFrame {
     private javax.swing.JLabel CCBambuImg;
     private javax.swing.JLabel ColegioWalteImg;
     private javax.swing.JToggleButton acaciasToggle;
+    private javax.swing.JLabel acaciasjLabel;
     private javax.swing.JToggleButton alemanaToggle;
+    private javax.swing.JLabel alemanajLabel;
     private javax.swing.JLabel avAlbertEinstein1Img;
     private javax.swing.JLabel avAlbertEinstein2Img;
     private javax.swing.JLabel avAlbertEinstein3Img1;
@@ -1129,7 +1283,9 @@ public class Mapa extends javax.swing.JFrame {
     private javax.swing.JLabel avRecolucionariaImg;
     private javax.swing.JLabel ballySportsImg;
     private javax.swing.JToggleButton ballyToggle;
+    private javax.swing.JLabel ballyjLabel;
     private javax.swing.JToggleButton bambuToggle;
+    private javax.swing.JLabel bambujLabel;
     private javax.swing.JLabel blvrSergioVieraImg;
     private javax.swing.JLabel calleAntiguaFerrocarril;
     private javax.swing.JLabel calleDouglasVarelaImg;
@@ -1142,11 +1298,13 @@ public class Mapa extends javax.swing.JFrame {
     private javax.swing.JLabel calleSanJeronmoEmilianiImg;
     private javax.swing.JLabel canchaCoopefaImg;
     private javax.swing.JToggleButton capitalToggle;
+    private javax.swing.JLabel capitaljLabel;
     private javax.swing.JLabel carreteraPanamericana1Img;
     private javax.swing.JLabel carreteraPanamericana2Img;
     private javax.swing.JLabel carreteraPanamericana3Img;
     private javax.swing.JLabel casaDeLoVestidosImg;
     private javax.swing.JToggleButton cascadasToggle;
+    private javax.swing.JLabel cascadasjLabel;
     private javax.swing.JLabel ccFeriaRosaImg;
     private javax.swing.JLabel cc_acaciasImg;
     private javax.swing.JLabel cn1_1;
@@ -1156,16 +1314,23 @@ public class Mapa extends javax.swing.JFrame {
     private javax.swing.JLabel colegioHighlandsImg;
     private javax.swing.JLabel coloniaGeneralArceImg;
     private javax.swing.JToggleButton coopefaToggle;
+    private javax.swing.JLabel coopefajLabel;
     private javax.swing.JToggleButton cuscaToggle;
+    private javax.swing.JLabel cuscajLabel;
     private javax.swing.JToggleButton emilianiToggle;
+    private javax.swing.JLabel emilianijLabel;
     private javax.swing.JLabel escuelaAlemanaImg;
     private javax.swing.JLabel escuelaMilitarImg;
     private javax.swing.JLabel estadioCuscatlanImg;
     private javax.swing.JToggleButton feriaRosaToggle;
+    private javax.swing.JLabel feriajLabel;
     private javax.swing.JLabel gambetaLosProceresImg;
     private javax.swing.JToggleButton gambetaToggle;
+    private javax.swing.JLabel gambetajLabel;
+    private javax.swing.JLabel highlandsLabel;
     private javax.swing.JToggleButton highlandsToggle;
     private javax.swing.JToggleButton hospitalESToggle;
+    private javax.swing.JLabel hospitalESjLabel;
     private javax.swing.JLabel hospitalImg;
     private javax.swing.JLabel hotelImg;
     private javax.swing.JLabel imagenMapa;
@@ -1185,12 +1350,16 @@ public class Mapa extends javax.swing.JFrame {
     private javax.swing.JLabel manuelEnriqueAraujo3Img;
     private javax.swing.JLabel manuelEnriqueAraujo4Img;
     private javax.swing.JToggleButton militarToggle;
+    private javax.swing.JLabel militarjLabel;
     private javax.swing.JLabel multiplazaImg;
     private javax.swing.JToggleButton multiplazaToggle;
+    private javax.swing.JLabel multiplazajLabel;
     private javax.swing.JToggleButton pLomasToggle;
+    private javax.swing.JLabel pLomasjLabel;
     private javax.swing.JLabel parqueDePelotasImg;
     private javax.swing.JLabel parqueLomasDeSanFranciscoimg;
     private javax.swing.JToggleButton pelotasToggle;
+    private javax.swing.JLabel pelotasjLabel;
     private javax.swing.JLabel proceres1Img;
     private javax.swing.JLabel proceres2Img;
     private javax.swing.JLabel proceres3Img;
@@ -1200,20 +1369,28 @@ public class Mapa extends javax.swing.JFrame {
     private javax.swing.JToggleButton sanFranciscoToggle;
     private javax.swing.JLabel texacoCoopefaImg;
     private javax.swing.JToggleButton texacoCoopefaToggle;
+    private javax.swing.JLabel texacoCoopefajLabel;
     private javax.swing.JLabel texacoLomaLindaImg;
+    private javax.swing.JLabel texacoLomajLabel;
     private javax.swing.JToggleButton texacoToggle;
     private javax.swing.JTextField textBoxP1;
     private javax.swing.JTextField textBoxP2;
     private javax.swing.JLabel ucaCalleImg;
     private javax.swing.JLabel ucaImg;
+    private javax.swing.JLabel ucaLabel;
     private javax.swing.JToggleButton ucaToggle;
     private javax.swing.JLabel unoLasLomasImg;
     private javax.swing.JToggleButton unoLomasToggle;
+    private javax.swing.JLabel unoLomasjLabel;
     private javax.swing.JLabel unoSultanaImg;
     private javax.swing.JToggleButton unoSultanaToggle;
+    private javax.swing.JLabel unoSultanajLabel;
     private javax.swing.JToggleButton vestidosToggle;
+    private javax.swing.JLabel vestidosjLabel;
+    private javax.swing.JLabel vetFranciscojLabel;
     private javax.swing.JLabel veterinariaSanFranciscoImg;
     private javax.swing.JLabel veterinariaSantaFeImg;
     private javax.swing.JToggleButton walteToggle;
+    private javax.swing.JLabel waltejLabel;
     // End of variables declaration//GEN-END:variables
 }
