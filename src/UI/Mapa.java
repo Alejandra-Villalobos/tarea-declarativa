@@ -930,9 +930,10 @@ public class Mapa extends javax.swing.JFrame {
         getContentPane().add(acaciasjLabel);
         acaciasjLabel.setBounds(1040, 600, 110, 30);
 
+        cascadasjLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         cascadasjLabel.setText("Las Cascadas");
         getContentPane().add(cascadasjLabel);
-        cascadasjLabel.setBounds(360, 510, 69, 16);
+        cascadasjLabel.setBounds(350, 510, 90, 16);
 
         multiplazajLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         multiplazajLabel.setText("Multiplaza");
