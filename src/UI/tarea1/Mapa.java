@@ -1104,6 +1104,7 @@ public class Mapa extends javax.swing.JFrame {
 
         if (!q1.hasSolution()) {
             System.out.println("Base de conocimiento no encontrada");
+            errorDialogs("BC no encontrada");
         } else {
             System.out.println("Base de conocimiento encontrada!");
             System.out.println("________________________________");
