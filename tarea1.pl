@@ -161,7 +161,7 @@ conecta_con(interseccion_sultana_uca, calle_uca).
 conecta_con(calle_uca, interseccion_sultana_uca).
 
 conecta_con(blvr_la_sultana_1, interseccion_mediterraneo_sultana_ferrocarril).
-conecta_con(interseccion_mediterraneo_sultana_ferrocarrilblvr_la_sultana_1).
+conecta_con(interseccion_mediterraneo_sultana_ferrocarril, blvr_la_sultana_1).
 
 conecta_con(uca, calle_uca).
 conecta_con(calle_uca, uca).

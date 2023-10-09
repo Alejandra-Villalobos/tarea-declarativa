@@ -17,6 +17,9 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Color;
 import java.awt.BasicStroke;
+import javax.swing.JComponent;
+import javax.swing.JDialog;
+import javax.swing.JOptionPane;
 
 public class Mapa extends javax.swing.JFrame {
 
@@ -24,15 +27,15 @@ public class Mapa extends javax.swing.JFrame {
     private Map<String, JLabel> lugarImagenes = new HashMap<>();//lista de imagens de los lugares
     //lista para guardar la ruta generada  
     private ArrayList<String> listaRutas = new ArrayList<>();//lista que contiene los lugares que componen la ruta
-    
+
     public Mapa() {
         initComponents();
-        
+
         //localidades
         lugarImagenes.put("uca", ucaImg);
-        lugarImagenes.put("hotel_capital",hotelImg);
+        lugarImagenes.put("hotel_capital", hotelImg);
         lugarImagenes.put("hospital_el_salvador", hospitalImg);
-        lugarImagenes.put("centro_comercial_bambu",CCBambuImg );
+        lugarImagenes.put("centro_comercial_bambu", CCBambuImg);
         lugarImagenes.put("colegio_highlands", colegioHighlandsImg);
         lugarImagenes.put("instituto_tecnico_emiliani", institutoEmilianiImg);
         lugarImagenes.put("multiplaza", multiplazaImg);
@@ -55,50 +58,50 @@ public class Mapa extends javax.swing.JFrame {
         lugarImagenes.put("gambeta_los_proceres", gambetaLosProceresImg);
         lugarImagenes.put("texaco_loma_linda", texacoLomaLindaImg);
         lugarImagenes.put("estadio_cuscatlan", estadioCuscatlanImg);
-        
+
         //calles
-        lugarImagenes.put("calle_uca",ucaCalleImg);
-        lugarImagenes.put("blvr_sergio_viera_de_mello",blvrSergioVieraImg);
-        lugarImagenes.put("av_de_la_revolucion",avRecolucionariaImg );
-        lugarImagenes.put("av_las_mercedes_1",avLasMercedes1Img );
-        lugarImagenes.put("av_las_mercedes_2",avLasMercedes2Img );
-        lugarImagenes.put("calle_capitan_douglas_varela",calleDouglasVarelaImg );
-        lugarImagenes.put("av_independecia_1",avIndependencia1Img );
-        lugarImagenes.put("av_independecia_2",avIndependencia2Img );
-        lugarImagenes.put("carretera_panamericana_1",carreteraPanamericana1Img );
-        lugarImagenes.put("carretera_panamericana_2",carreteraPanamericana2Img );
-        lugarImagenes.put("carretera_panamericana_3",carreteraPanamericana3Img );   
-        lugarImagenes.put("alameda_manuel_enrique_araujo_1",manuelEnriqueAraujo1Img );
-        lugarImagenes.put("alameda_manuel_enrique_araujo_2",manuelEnriqueAraujo2Img );
-        lugarImagenes.put("alameda_manuel_enrique_araujo_3",manuelEnriqueAraujo3Img );
-        lugarImagenes.put("alameda_manuel_enrique_araujo_4",manuelEnriqueAraujo4Img );
-        lugarImagenes.put("av_de_la_revolucion",avRecolucionariaImg );
-        lugarImagenes.put("blvr_sergio_viera_de_mello",blvrSergioVieraImg );
-        lugarImagenes.put("calle_san_jeronimo_emiliani",calleSanJeronmoEmilianiImg );
-        lugarImagenes.put("calle_antigua_ferrocarril",calleAntiguaFerrocarril );
-        lugarImagenes.put("calle_del_mediterraneo_1",calleMediterraneo1Img );
-        lugarImagenes.put("calle_del_mediterraneo_2",calleMediterraneo2Img );
-        lugarImagenes.put("blvr_la_sultana_1",laSultana1Img );
-        lugarImagenes.put("blvr_la_sultana_2",laSultana2Img );
-        lugarImagenes.put("blvr_la_sultana_3",laSultana3Img );
-        lugarImagenes.put("los_proceres_1",proceres1Img );
-        lugarImagenes.put("los_proceres_2",proceres2Img );
-        lugarImagenes.put("los_proceres_3",proceres3Img );
-        lugarImagenes.put("los_proceres_4",proceres4Img );
-        lugarImagenes.put("los_proceres_5",proceres5Img );
-        lugarImagenes.put("calle_jorge_dominguez",calleJorgeDominguezImg );
-        lugarImagenes.put("colonia_general_arce",coloniaGeneralArceImg );
-        lugarImagenes.put("av_albert_einstein_1",avAlbertEinstein1Img );
-        lugarImagenes.put("av_albert_einstein_2",avAlbertEinstein2Img );
-        lugarImagenes.put("av_albert_einstein_3",avAlbertEinstein3Img1 );
-        lugarImagenes.put("c_n1_1",cn1_1 );
-        lugarImagenes.put("c_n1_2",cn1_2Img );
-        lugarImagenes.put("c_n1_3",cn1_3Img );
-        lugarImagenes.put("c_n1_4",cn1_4Img );
-        lugarImagenes.put("calle_antigua_a_huizucar_1",calleHuizucar1Img );
-        lugarImagenes.put("calle_antigua_a_huizucar_2",calleHuizucar2Img );
-        lugarImagenes.put("calle_antigua_a_huizucar_3",calleHuizucar3Img );
-               
+        lugarImagenes.put("calle_uca", ucaCalleImg);
+        lugarImagenes.put("blvr_sergio_viera_de_mello", blvrSergioVieraImg);
+        lugarImagenes.put("av_de_la_revolucion", avRecolucionariaImg);
+        lugarImagenes.put("av_las_mercedes_1", avLasMercedes1Img);
+        lugarImagenes.put("av_las_mercedes_2", avLasMercedes2Img);
+        lugarImagenes.put("calle_capitan_douglas_varela", calleDouglasVarelaImg);
+        lugarImagenes.put("av_independecia_1", avIndependencia1Img);
+        lugarImagenes.put("av_independecia_2", avIndependencia2Img);
+        lugarImagenes.put("carretera_panamericana_1", carreteraPanamericana1Img);
+        lugarImagenes.put("carretera_panamericana_2", carreteraPanamericana2Img);
+        lugarImagenes.put("carretera_panamericana_3", carreteraPanamericana3Img);
+        lugarImagenes.put("alameda_manuel_enrique_araujo_1", manuelEnriqueAraujo1Img);
+        lugarImagenes.put("alameda_manuel_enrique_araujo_2", manuelEnriqueAraujo2Img);
+        lugarImagenes.put("alameda_manuel_enrique_araujo_3", manuelEnriqueAraujo3Img);
+        lugarImagenes.put("alameda_manuel_enrique_araujo_4", manuelEnriqueAraujo4Img);
+        lugarImagenes.put("av_de_la_revolucion", avRecolucionariaImg);
+        lugarImagenes.put("blvr_sergio_viera_de_mello", blvrSergioVieraImg);
+        lugarImagenes.put("calle_san_jeronimo_emiliani", calleSanJeronmoEmilianiImg);
+        lugarImagenes.put("calle_antigua_ferrocarril", calleAntiguaFerrocarril);
+        lugarImagenes.put("calle_del_mediterraneo_1", calleMediterraneo1Img);
+        lugarImagenes.put("calle_del_mediterraneo_2", calleMediterraneo2Img);
+        lugarImagenes.put("blvr_la_sultana_1", laSultana1Img);
+        lugarImagenes.put("blvr_la_sultana_2", laSultana2Img);
+        lugarImagenes.put("blvr_la_sultana_3", laSultana3Img);
+        lugarImagenes.put("los_proceres_1", proceres1Img);
+        lugarImagenes.put("los_proceres_2", proceres2Img);
+        lugarImagenes.put("los_proceres_3", proceres3Img);
+        lugarImagenes.put("los_proceres_4", proceres4Img);
+        lugarImagenes.put("los_proceres_5", proceres5Img);
+        lugarImagenes.put("calle_jorge_dominguez", calleJorgeDominguezImg);
+        lugarImagenes.put("colonia_general_arce", coloniaGeneralArceImg);
+        lugarImagenes.put("av_albert_einstein_1", avAlbertEinstein1Img);
+        lugarImagenes.put("av_albert_einstein_2", avAlbertEinstein2Img);
+        lugarImagenes.put("av_albert_einstein_3", avAlbertEinstein3Img1);
+        lugarImagenes.put("c_n1_1", cn1_1);
+        lugarImagenes.put("c_n1_2", cn1_2Img);
+        lugarImagenes.put("c_n1_3", cn1_3Img);
+        lugarImagenes.put("c_n1_4", cn1_4Img);
+        lugarImagenes.put("calle_antigua_a_huizucar_1", calleHuizucar1Img);
+        lugarImagenes.put("calle_antigua_a_huizucar_2", calleHuizucar2Img);
+        lugarImagenes.put("calle_antigua_a_huizucar_3", calleHuizucar3Img);
+
         ocultarRutas();
     }
 
@@ -220,7 +223,6 @@ public class Mapa extends javax.swing.JFrame {
         emilianijLabel = new javax.swing.JLabel();
         highlandsLabel = new javax.swing.JLabel();
         ucaLabel = new javax.swing.JLabel();
-        imagenMapa = new javax.swing.JLabel();
         veterinariaSantaFeImg = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         textBoxP2 = new javax.swing.JTextField();
@@ -233,6 +235,7 @@ public class Mapa extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
         rutaList = new java.awt.List();
+        imagenMapa = new javax.swing.JLabel();
 
         setTitle("Rutas");
         setAlwaysOnTop(true);
@@ -967,13 +970,6 @@ public class Mapa extends javax.swing.JFrame {
         getContentPane().add(ucaLabel);
         ucaLabel.setBounds(840, 510, 40, 16);
 
-        imagenMapa.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        imagenMapa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/mapa.png"))); // NOI18N
-        imagenMapa.setToolTipText("");
-        imagenMapa.setIconTextGap(0);
-        getContentPane().add(imagenMapa);
-        imagenMapa.setBounds(340, 0, 1010, 690);
-
         veterinariaSantaFeImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/localizacion.png"))); // NOI18N
         veterinariaSantaFeImg.setToolTipText("Veterinaria Santa Fe");
         getContentPane().add(veterinariaSantaFeImg);
@@ -1057,26 +1053,47 @@ public class Mapa extends javax.swing.JFrame {
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 340, 700);
 
+        imagenMapa.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        imagenMapa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/mapa.png"))); // NOI18N
+        imagenMapa.setToolTipText("");
+        imagenMapa.setIconTextGap(0);
+        getContentPane().add(imagenMapa);
+        imagenMapa.setBounds(340, 0, 1010, 690);
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    public void ocultarRutas(){
+    public void ocultarRutas() {
         for (Map.Entry<String, JLabel> entry : lugarImagenes.entrySet()) {
-            JLabel img = entry.getValue();           
+            JLabel img = entry.getValue();
             System.out.println("calue:" + img.getName());
             img.setVisible(false);
         }
-        
+
     }
-    
-    public void mostrarLugares(String lugar){
+
+    public void mostrarLugares(String lugar) {
         JLabel imagen = lugarImagenes.get(lugar);
         if (imagen != null) {
             imagen.setVisible(true);
         }
     }
-    
+
+    public void errorDialogs(String message) {
+        JOptionPane.showMessageDialog(this, message, "Selección de lugares", JOptionPane.ERROR_MESSAGE);
+    }
+
     private void BtnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnBuscarActionPerformed
+        if (textBoxP1.getText().equals("punto de partida")) {
+            errorDialogs("Debes elegir un lugar de partida");
+            return;
+        }
+
+        if (textBoxP2.getText().equals("punto de destino")) {
+            errorDialogs("Debes elegir un lugar de destino");
+            return;
+        }
+
         rutaList.removeAll();
         ocultarRutas();
 
@@ -1094,7 +1111,8 @@ public class Mapa extends javax.swing.JFrame {
 
             String t2 = "desde_hasta(" + lugar1 + "," + lugar2 + ", W)"; //consulta
             Query q2 = new Query(t2);//query
-
+            
+            
             while (q2.hasMoreSolutions()) {
                 Map<String, Term> route = q2.nextSolution(); //obtener respuesta
                 System.out.println("W = " + route.get("W"));
@@ -1219,19 +1237,20 @@ public class Mapa extends javax.swing.JFrame {
         validate(walteToggle, "colegio_augusto_walte");
     }//GEN-LAST:event_walteToggleActionPerformed
 
-    private void validate(javax.swing.JToggleButton button, String place){
-        if(textBoxP1.getText().equals("punto de partida") && button.isSelected())
-            textBoxP1.setText(place); 
-        else if(textBoxP2.getText().equals("punto de destino") && button.isSelected())
+    private void validate(javax.swing.JToggleButton button, String place) {
+        if (textBoxP1.getText().equals("punto de partida") && button.isSelected()) {
+            textBoxP1.setText(place);
+        } else if (textBoxP2.getText().equals("punto de destino") && button.isSelected()) {
             textBoxP2.setText(place);
-        else if(textBoxP1.getText().equals(place) && !button.isSelected())
+        } else if (textBoxP1.getText().equals(place) && !button.isSelected()) {
             textBoxP1.setText("punto de partida");
-        else if(textBoxP2.getText().equals(place) && !button.isSelected())
+        } else if (textBoxP2.getText().equals(place) && !button.isSelected()) {
             textBoxP2.setText("punto de destino");
-        else
+        } else {
             button.setSelected(false);
+        }
     }
-    
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -1256,12 +1275,11 @@ public class Mapa extends javax.swing.JFrame {
         }
         //</editor-fold>
 
-        
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Mapa().setVisible(true);
-            } 
+            }
         });
     }
 
