@@ -360,6 +360,19 @@ conecta_con(los_proceres_3, los_proceres_4).
 conecta_con(los_proceres_4, los_proceres_3).
 
 
+% Validar atom X
+
+ir_hacia(X, _):-
+    not(atom(X)),
+    writeln("Primer lugar no encontrado"), !, fail.
+
+% Validar atom Y
+
+ir_hacia(_, Y):-
+    not(atom(Y)),
+    writeln("Segundo lugar no encontrado"), !, fail.
+
+
 % Validar lugar X
 
 ir_hacia(X, _):-

@@ -987,7 +987,7 @@ public class Mapa extends javax.swing.JFrame {
 
         BtnLimpiar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         BtnLimpiar.setForeground(new java.awt.Color(145, 195, 255));
-        BtnLimpiar.setText("Limpiar Mapa");
+        BtnLimpiar.setText("Limpiar Mapa / Reiniciar");
         BtnLimpiar.setBorder(null);
         BtnLimpiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1081,6 +1081,8 @@ public class Mapa extends javax.swing.JFrame {
 
     public void errorDialogs(String message) {
         JOptionPane.showMessageDialog(this, message, "Selección de lugares", JOptionPane.ERROR_MESSAGE);
+        textBoxP1.setText("punto de partida");
+        textBoxP2.setText("punto de destino");
     }
 
     private void BtnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnBuscarActionPerformed
@@ -1109,10 +1111,25 @@ public class Mapa extends javax.swing.JFrame {
             String lugar1 = textBoxP1.getText(); //textBox punto de partida
             String lugar2 = textBoxP2.getText(); //textBox punto de destino
 
+            String error1 = "lugar(\"" + lugar1 + "\")";
+            Query qError1 = new Query(error1);
+            
+            String error2 = "lugar(\"" + lugar2 + "\")";
+            Query qError2 = new Query(error2);
+
+            if (!qError1.hasSolution()) {
+                errorDialogs("Lugar de origen no encontrado");
+                return;
+            }
+            
+            if (!qError2.hasSolution()) {
+                errorDialogs("Lugar de origen no encontrado");
+                return;
+            }
+
             String t2 = "desde_hasta(" + lugar1 + "," + lugar2 + ", W)"; //consulta
             Query q2 = new Query(t2);//query
-            
-            
+
             while (q2.hasMoreSolutions()) {
                 Map<String, Term> route = q2.nextSolution(); //obtener respuesta
                 System.out.println("W = " + route.get("W"));
@@ -1236,7 +1253,7 @@ public class Mapa extends javax.swing.JFrame {
     private void walteToggleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_walteToggleActionPerformed
         validate(walteToggle, "colegio_augusto_walte");
     }//GEN-LAST:event_walteToggleActionPerformed
-
+    
     private void validate(javax.swing.JToggleButton button, String place) {
         if (textBoxP1.getText().equals("punto de partida") && button.isSelected()) {
             textBoxP1.setText(place);
