@@ -17,9 +17,11 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Color;
 import java.awt.BasicStroke;
+import javax.swing.ButtonGroup;
 import javax.swing.JComponent;
 import javax.swing.JDialog;
 import javax.swing.JOptionPane;
+import javax.swing.JToggleButton;
 
 public class Mapa extends javax.swing.JFrame {
 
@@ -28,9 +30,11 @@ public class Mapa extends javax.swing.JFrame {
     //lista para guardar la ruta generada  
     private ArrayList<String> listaRutas = new ArrayList<>();//lista que contiene los lugares que componen la ruta
 
+    private ArrayList<JToggleButton> activeToggles = new ArrayList<>();
+
     public Mapa() {
         initComponents();
-
+       
         //localidades
         lugarImagenes.put("uca", ucaImg);
         lugarImagenes.put("hotel_capital", hotelImg);
@@ -1114,7 +1118,7 @@ public class Mapa extends javax.swing.JFrame {
 
             String error1 = "lugar(\"" + lugar1 + "\")";
             Query qError1 = new Query(error1);
-            
+
             String error2 = "lugar(\"" + lugar2 + "\")";
             Query qError2 = new Query(error2);
 
@@ -1122,7 +1126,7 @@ public class Mapa extends javax.swing.JFrame {
                 errorDialogs("Lugar de origen no encontrado");
                 return;
             }
-            
+
             if (!qError2.hasSolution()) {
                 errorDialogs("Lugar de origen no encontrado");
                 return;
@@ -1151,7 +1155,9 @@ public class Mapa extends javax.swing.JFrame {
         listaRutas.clear();
         rutaList.removeAll();
         textBoxP1.setText("punto de partida");
-        textBoxP2.setText("punto de destino");
+        textBoxP2.setText("punto de destino");  
+        activeToggles.forEach(t -> t.setSelected(false));
+        activeToggles.clear();
     }//GEN-LAST:event_BtnLimpiarActionPerformed
 
     private void ucaToggleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ucaToggleActionPerformed
@@ -1254,12 +1260,14 @@ public class Mapa extends javax.swing.JFrame {
     private void walteToggleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_walteToggleActionPerformed
         validate(walteToggle, "colegio_augusto_walte");
     }//GEN-LAST:event_walteToggleActionPerformed
-    
+
     private void validate(javax.swing.JToggleButton button, String place) {
         if (textBoxP1.getText().equals("punto de partida") && button.isSelected()) {
             textBoxP1.setText(place);
+            activeToggles.add(button);
         } else if (textBoxP2.getText().equals("punto de destino") && button.isSelected()) {
             textBoxP2.setText(place);
+            activeToggles.add(button);
         } else if (textBoxP1.getText().equals(place) && !button.isSelected()) {
             textBoxP1.setText("punto de partida");
         } else if (textBoxP2.getText().equals(place) && !button.isSelected()) {
